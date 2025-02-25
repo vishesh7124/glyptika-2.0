@@ -13,9 +13,17 @@
 }
  */
 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+
  .nt-embed{
     width: 100%;
     height: 100%;
+    position: relative;
 }
 .nt-embed canvas{
     width: 100%;
@@ -23,6 +31,6 @@
 }  
 
 html,body{
-    height: 200vh;
+    min-height: 100vh; 
     background: black;
 }

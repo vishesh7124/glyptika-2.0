@@ -4,7 +4,7 @@
 // import './App.css'
 // import Landings from './pages/Landings'
 import { AuroraBackground } from "./components/ui/aurora-background"
-// import Landings from "./pages/Landings"
+import Landings from "./pages/Landings"
 // import { motion } from "framer-motion"
 
 
@@ -12,7 +12,17 @@ function App() {
   // const [count, setCount] = useState(0)  
 
   return (
-    <AuroraBackground  />
+    <div className="h-full w-full">
+    
+      <AuroraBackground   >
+        <Landings/>
+
+      </AuroraBackground   >
+      
+      {/* <div className="h-full w-full z-10">
+
+      </div> */}
+    </div>
 
   
   )
