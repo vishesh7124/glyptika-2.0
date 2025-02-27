@@ -1,4 +1,16 @@
 @import "tailwindcss";
+/* ---break---
+ */
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: 'Kdam Thmor';
+  src: url('./assets/KdamThmorPro-Regular.ttf');
+}
+
+/* ---break---
+ */
+/* @custom-variant dark (&:is(.dark *)); */
 /* @config "../tailwind.config.js";
 
 @custom-variant dark (&:is(.dark *));
@@ -15,22 +27,85 @@
 
  *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
- }
+  }
 
-
- .nt-embed{
+  .nt-embed{
     width: 100%;
     height: 100%;
-    position: relative;
-}
-.nt-embed canvas{
+    /* position: relative; */
+  }
+  .nt-embed canvas{
     width: 100%;
     height: 100%;
+  }  
+
+  html,body{
+    padding: 0;
+    min-height: 100vh; 
+    background: white;
+    /* background: linear-gradient(to top, #04050c 0%, #040b13 50%, #000000 100%); */
+    /* background: black; */
+    color: white;
+    overflow-x: hidden;
+  font: var(--font-text-primary);
 }  
 
-html,body{
-    min-height: 100vh; 
-    background: black;
+@theme{
+  --font-text-primary: 'Kdam Thmor';
 }
+
+/* ---break---
+ */  
+
+/* @layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+} */  
+
+/* ---break---
+ */  
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  /* ---break---
+ */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  /* ---break---
+ */
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}  
+
+/* ---break---
+ */  
+
+/* @layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} */  
+
+/* ---break---
+ */  

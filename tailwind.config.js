@@ -27,7 +27,7 @@ module.exports = {
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },
-      },
+      }
     },
   },
   plugins: [addVariablesForColors],
