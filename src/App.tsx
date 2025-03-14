@@ -2,12 +2,16 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
-// import Landings from './pages/Landings'
+import { Routes, Route } from "react-router"
+// import { motion } from "framer-motion"
+
 import { AuroraBackground } from "./components/aurora-background"
-import Landings from "./pages/Landings"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-// import { motion } from "framer-motion"
+
+import Landings from "./pages/Landings"
+import Projects from "./pages/Projects"
+
 
 
 function App() {
@@ -19,7 +23,10 @@ function App() {
       <AuroraBackground   >
         
         <Navbar/>
-        <Landings/>
+        <Routes>
+          <Route path="/" element={<Landings/>} ></Route>
+          <Route path="/projects" element={<Projects/>} ></Route>
+        </Routes>
         <Footer/>
       </AuroraBackground   >
       

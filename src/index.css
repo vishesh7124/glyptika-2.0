@@ -43,8 +43,8 @@
   html,body{
     padding: 0;
     min-height: 100vh; 
-    /* background: white; */
-    background: linear-gradient(to top, #04050c 0%, #040b13 50%, #000000 100%);
+    background: white;
+    /* background: linear-gradient(to top, #04050c 0%, #040b13 50%, #000000 100%); */
     background: black;
     color: white;
     overflow-x: hidden;
