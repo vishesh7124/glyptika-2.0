@@ -8,7 +8,7 @@ import {projectItems} from './data/projectData';
 
 export default function ProjectCard() {
   return (
-    <BentoGrid className="w-screen  md:auto-rows-[22rem]">
+    <BentoGrid className="w-screen  md:auto-rows-[15rem]">
       {projectItems.map((item, i) => (
         <BentoGridItem
           key={i}
