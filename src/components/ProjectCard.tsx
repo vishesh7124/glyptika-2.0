@@ -6,10 +6,15 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Button } from "./ui/button";
 
 import vid1 from '../assets/videos/AlphaTreadShoes.mp4'
 import vid2 from '../assets/videos/Samsung.mp4'
+import Loader from "./Loader";
+import { useState } from "react";
+import LazyMedia from "./LazyMedia";
 
 export default function ProjectCard() {
   console.log(items)
@@ -21,13 +26,7 @@ export default function ProjectCard() {
           key={i}
           title={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. "}
           description={<Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Know More</Button>}
-          header={<video
-            src={(i+1)%2==0 ? vid1:"https://res.cloudinary.com/duifdyecp/video/upload/v1741978814/dpbbvhgjfhu3umuxvizc.mp4"}
-            className="w-full h-full rounded-md object-fill  "
-            autoPlay
-            loop
-            muted
-          />}
+          header={<LazyMedia mediaType="video" src="" />}
           className={`md:${gridPattern[i%gridPattern.length]}`}
           icon={item.icon}
         />

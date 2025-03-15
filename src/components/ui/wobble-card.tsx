@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "motion/react";
+import { motion, spring } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export const WobbleCard = ({
@@ -40,6 +40,11 @@ export const WobbleCard = ({
         "mx-auto w-full   relative rounded-2xl overflow-hidden",
         containerClassName
       )}
+
+      initial={{ scaleY: 0 }}
+      whileInView={{ scaleY: 1,transition: {type:"spring", duration: 1, bounce:0.5 } }}
+      viewport={{ once: true }}
+
     >
       <div
         className="relative  h-full [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))]  sm:mx-0 sm:rounded-2xl overflow-hidden"
