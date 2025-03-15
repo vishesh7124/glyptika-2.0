@@ -10,10 +10,7 @@ export const BentoGrid = ({
 }) => {
   return (
     <div
-      className={cn(
-        "grid lg:auto-rows-[22rem] max-sm:auto-rows-[27rem] grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto ",
-        className
-      )}
+      className={`grid lg:auto-rows-[22rem] max-sm:auto-rows-[27rem] grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto ${className}`}
     >
       {children}
     </div>
@@ -30,14 +27,15 @@ export const BentoGridItem = ({
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
-  icon?: React.ReactNode;
+  // icon?: React.ReactNode;
 }) => {
   console.log(className)
   return (
     <div
       className={cn(
-        "row-span-2 max-sm:row-span-1 max-sm:!m-4 !m-4 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none   justify-between flex flex-col",
+        "row-span-2  max-sm:row-span-1 max-sm:!m-4 !m-4 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col",
         className
+
       )}
     >
             <WobbleCard
