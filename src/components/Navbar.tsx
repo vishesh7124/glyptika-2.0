@@ -3,6 +3,7 @@ import NavMenu from "./NavMenu"
 import { IconMenu } from "@tabler/icons-react"
 import { useState } from "react"
 import {X} from 'lucide-react'
+import { NavLink } from "react-router"
 
 const Navbar = () => {
 
@@ -15,11 +16,11 @@ const Navbar = () => {
           <>
             <h1>GLYPTIKA</h1>
             <div className="links flex justify-between max-sm:hidden  gap-8">
-                <a className="hover:text-[#5EC2B5]" href="/">HOME</a>
+                <NavLink to="/" className="hover:text-[#5EC2B5]" >HOME</NavLink>
                 <NavMenu/>
-                <a className="hover:text-[#5EC2B5]" href="/">SERVICES</a>
+                <NavLink to="/services" className="hover:text-[#5EC2B5]">SERVICES</NavLink>
             </div>
-            <Button className="bg-[#5EC2B5] p-4 rounded-3xl max-sm:hidden " >Contact Us</Button>
+            <Button className="bg-[#5EC2B5] p-4 rounded-3xl max-sm:hidden " ><NavLink to="/contact">Contact Us</NavLink></Button>
             <div className="hamburger-menu sm:hidden" onClick={()=>setMenuOpen(!menuOpen)} >
                 {menuOpen ? <X className="h-4 w-4" /> :
                 <IconMenu className="h-4 w-4" /> }
@@ -37,11 +38,11 @@ const Navbar = () => {
             </div>
             <div className="separator w-full h-[0.050rem] bg-white "></div>
             <div className="links flex flex-col justify-center items-center gap-3 ">
-                <a className="hover:text-[#5EC2B5]" href="/">HOME</a>
+                <NavLink to="/" className="hover:text-[#5EC2B5]" >HOME</NavLink>
                 <NavMenu/>
-                <a className="hover:text-[#5EC2B5]" href="/">SERVICES</a>
+                <NavLink to="/services" className="hover:text-[#5EC2B5]" >SERVICES</NavLink>
             </div>
-            <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Contact Us</Button>
+            <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " ><NavLink to="/contact">Contact Us</NavLink></Button>
             
           </>
       }
