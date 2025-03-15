@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import vid1 from '../assets/videos/AlphaTreadShoes.mp4'
 import vid2 from '../assets/videos/Samsung.mp4'
+import { NavLink } from "react-router";
 
 interface Video {
   id: number;
@@ -73,12 +74,13 @@ const LandingVideo = () => {
           />
         ))}
       </div>
-      <a
-        href="#"
+      <NavLink
+        to="/projects"
+
         className="absolute bottom-2 right-4 font-text-primary text-white text-sm hover:text-[#5EC2B5] transition-colors"
       >
         PROJECTS {'>>'}
-      </a>
+      </NavLink>
     </div>
   );
 };
