@@ -19,6 +19,7 @@ export const projectItems: ProjectItem[] = [
     description: <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Know More</Button>    ,
     mediaType: "video",
     src:"https://res.cloudinary.com/duifdyecp/video/upload/v1741978814/dpbbvhgjfhu3umuxvizc.mp4",
+    className:"md:col-span-2"
   },
   {
     id:2,
@@ -27,6 +28,7 @@ export const projectItems: ProjectItem[] = [
     description: <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Know More</Button>    ,
     mediaType: "video",
     src:"https://res.cloudinary.com/duifdyecp/video/upload/v1741978814/dpbbvhgjfhu3umuxvizc.mp4",
+    className:"md:col-span-1"
   },
   {
     id:3,
@@ -35,6 +37,7 @@ export const projectItems: ProjectItem[] = [
     description: <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Know More</Button>    ,
     mediaType: "video",
     src:"https://res.cloudinary.com/duifdyecp/video/upload/v1741978814/dpbbvhgjfhu3umuxvizc.mp4",
+    className:"md:col-span-1"
   },
   {
     id:4,
@@ -43,6 +46,7 @@ export const projectItems: ProjectItem[] = [
     description: <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Know More</Button>    ,
     mediaType: "video",
     src:"https://res.cloudinary.com/duifdyecp/video/upload/v1741978814/dpbbvhgjfhu3umuxvizc.mp4",
+    className:"md:col-span-2"
   },
   {
     id:5,
@@ -51,6 +55,7 @@ export const projectItems: ProjectItem[] = [
     description: <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Know More</Button>    ,
     mediaType: "video",
     src:"https://res.cloudinary.com/duifdyecp/video/upload/v1741978814/dpbbvhgjfhu3umuxvizc.mp4",
+    className:"md:col-span-3"
   },
 ];
 
