@@ -15,20 +15,21 @@ import vid2 from '../assets/videos/Samsung.mp4'
 import Loader from "./Loader";
 import { useState } from "react";
 import LazyMedia from "./LazyMedia";
+import {projectItems} from './data/projectData';
 
 export default function ProjectCard() {
   console.log(items)
 
   return (
     <BentoGrid className="w-screen  md:auto-rows-[22rem]">
-      {items.map((item, i) => (
+      {projectItems.map((item, i) => (
         <BentoGridItem
           key={i}
-          title={"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. "}
-          description={<Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Know More</Button>}
-          header={<LazyMedia mediaType="video" src="" />}
+          title={item.title}
+          description={item.description}
+          header={<LazyMedia mediaType={item.mediaType} src={item.src} />}
           className={`md:${gridPattern[i%gridPattern.length]}`}
-          icon={item.icon}
+          // icon={item.icon}
         />
       ))}
     </BentoGrid>

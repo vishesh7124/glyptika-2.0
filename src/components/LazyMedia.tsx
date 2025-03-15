@@ -23,7 +23,7 @@ const LazyMedia = ({mediaType,src}:LazyMediaProps) => {
                     }
                     {mediaType==='video'? 
                     <video
-                    src={"https://res.cloudinary.com/duifdyecp/video/upload/v1741978814/dpbbvhgjfhu3umuxvizc.mp4"}
+                    src={src}
                     className={`w-full h-full rounded-md object-fill  ${loading?"opacity-0":"opacity-100"}  `}
                     autoPlay
                     loop
