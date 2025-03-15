@@ -8,6 +8,7 @@ type ProjectItem = {
   description: React.ReactNode;
   mediaType: "image" | "video";
   src: string;
+  className?: string;
 };
 
 export const projectItems: ProjectItem[] = [
