@@ -1,12 +1,12 @@
 import { BentoGrid, BentoGridItem } from './ui/bento-grid';
 
+
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import LazyMedia from "./LazyMedia";
 import {projectItems} from './data/projectData';
 
 export default function ProjectCard() {
-
   return (
     <BentoGrid className="w-screen  md:auto-rows-[22rem]">
       {projectItems.map((item, i) => (
