@@ -11,6 +11,7 @@ import Footer from "./components/Footer"
 
 import Landings from "./pages/Landings"
 import Projects from "./pages/Projects"
+import ProjectDetails from "./pages/ProjectDetails"
 
 
 
@@ -24,8 +25,11 @@ function App() {
         
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Landings/>} ></Route>
-          <Route path="/projects" element={<Projects/>} ></Route>
+          <Route path="/" element={<Landings/>} />
+          <Route path="/projects" element={<Projects/>} />
+
+          <Route path="projects/:pid" element={<ProjectDetails/>} />
+
         </Routes>
         <Footer/>
       </AuroraBackground   >

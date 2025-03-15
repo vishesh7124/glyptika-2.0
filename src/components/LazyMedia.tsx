@@ -3,7 +3,6 @@ import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Loader from './Loader';
-import forest from '../assets/images/forest.png'
 
 interface LazyMediaProps {
     mediaType: 'image' | 'video';
@@ -36,7 +35,7 @@ const LazyMedia = ({mediaType,src}:LazyMediaProps) => {
                   />:
 
                     <img
-                    src={forest}
+                    src={src}
                     className={`w-full h-full rounded-md object-fill  ${loading?"opacity-0":"opacity-100"}  `}
 
                     onLoad={()=>setLoading(false)}
