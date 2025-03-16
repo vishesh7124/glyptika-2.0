@@ -11,10 +11,10 @@ export default function Landings() {
   const project = projectItems.find((item) => item.public_id === params.pid);
   return (
     <>
-      <div className="relative !mx-auto w-full font-text-primary flex items-center gap-10 justify-center">
-        <div className="flex flex-col w-11/12 p-8 gap-8 justify-center items-start ">
-          <h1 className="text-4xl text-left ">{project?.name.toUpperCase()}</h1>
-          <p className="text-left"> 
+      <div className="relative !mx-auto w-full font-text-primary flex max-sm:flex-col-reverse max-sm:gap-1 items-center gap-10 justify-center">
+        <div className="flex flex-col w-11/12 p-8 gap-8 justify-center items-start max-sm:items-center ">
+          <h1 className="text-4xl  text-left max-sm:text-center ">{project?.name.toUpperCase()}</h1>
+          <p className="text-left  max-sm:text-center"> 
             {project?.details}
           </p>
         </div>

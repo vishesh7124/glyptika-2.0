@@ -32,6 +32,7 @@ export const projectItems: ProjectItem[] = [
       `${baseUrlImg}/forest_usuleo.png`,
       `${baseUrlImg}/a_jvvqci.png`,
       `${baseUrlImg}/forest_usuleo.png`,
+
     ],
     className:"md:col-span-2"
   },

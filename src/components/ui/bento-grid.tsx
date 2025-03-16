@@ -39,10 +39,10 @@ export const BentoGridItem = ({
       )}
     >
             <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px]"
+        containerClassName={` ${title?"min-h-[500px]":"max-sm:h-[200px] max-sm:max-w-[90vw]"} col-span-1 lg:col-span-2 h-full  lg:min-h-[300px]`}
         className=""
       >
-      <div className={` ${title?"h-3/5":"h-full"} max-sm:h-6/12`}>
+      <div className={` ${title?"h-3/5 max-sm:h-6/12":"h-full  max-sm:h-full"} `}>
         {header}
     
       </div>
