@@ -1,18 +1,13 @@
-import { useState, useRef,useEffect, forwardRef, FunctionComponent, ComponentType, ForwardedRef } from "react";
-import { Suspense } from "react";
-import { OrbitControls, Center, Resize } from "@react-three/drei";
-import { Canvas, extend } from "@react-three/fiber";
+import { useState, useRef, forwardRef, FunctionComponent, ComponentType, ForwardedRef } from "react";
+import { Object3D } from "three";
+import { OrbitControls, Center, Resize, Environment } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Ship } from "./models/Ship";
-// import { Model } from "./models/Iphone";
 import { Model }  from "./models/Iphone_12_pro";
 import { Car } from "./models/Car";
-// import { Model } from "./models/Free_1972";
-import { Environment } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import { Object3D } from "three";
-import { Html, useProgress } from '@react-three/drei'
-import {motion} from "motion/react"
-import { AnimatePresence } from "motion/react";
+import {motion, AnimatePresence} from "motion/react"
+// import { Html, useProgress } from '@react-three/drei'
+// import { Suspense } from "react";
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -23,16 +18,16 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-function Loader() {
-  const { progress } = useProgress()
-  useEffect(() => {
-    if(progress===100){
-      console.log("loaded")
-    }
-  }, [progress])
+// function Loader() {
+//   const { progress } = useProgress()
+//   useEffect(() => {
+//     if(progress===100){
+//       console.log("loaded")
+//     }
+//   }, [progress])
   
-  return <Html center>{progress} % loaded</Html>
-}
+//   return <Html center>{progress} % loaded</Html>
+// }
 
 interface model {
   id:number;
@@ -84,7 +79,7 @@ const models: model[] = [
 
 function Box({model}:{model:FunctionComponent}) {
   const meshRef = useRef<Object3D>(null)
-  const {loaded} = useProgress()
+  // const {loaded} = useProgress()
 
   useFrame((_, delta) => meshRef.current && (meshRef.current.rotation.y += delta/2))
   
@@ -94,7 +89,7 @@ function Box({model}:{model:FunctionComponent}) {
 
   return (
     <>
-      {!loaded && <Html center>loaded</Html>}
+      {/* {!loaded && <Html center>loaded</Html>} */}
       <Center>
         <Resize scale={6} >
             <ModelWithRef ref={meshRef}    />
