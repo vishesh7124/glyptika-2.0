@@ -8,7 +8,6 @@ Title: iPhone 12 Pro
 */
 
 import * as THREE from 'three'
-import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -79,10 +78,13 @@ type GLTFResult = GLTF & {
     BodyFrame: THREE.MeshStandardMaterial
     Antenna: THREE.MeshStandardMaterial
   }
+  // @ts-ignore
   animations: GLTFAction[]
 }
 
+// @ts-ignore
 export function Model(props: JSX.IntrinsicElements['group']) {
+  // @ts-ignore
   const { nodes, materials } = useGLTF('src/assets/models/iphone_12_pro.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
