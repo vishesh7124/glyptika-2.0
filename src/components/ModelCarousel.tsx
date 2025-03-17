@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { cn } from "@/lib/utils";
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -19,11 +20,12 @@ interface model {
 interface Props{
     models: model[];
     handleModelSelect:(i:number)=>void;
+    className?:string;
 }
 
-const ModelCarousel = ({models,handleModelSelect}:Props) => {
+const ModelCarousel = ({models,handleModelSelect,className}:Props) => {
   return (
-    <div className="absolute bottom-0 right-30 z-30 font-text-primary text-[20rem] max-sm:text-[10rem] text-center " >
+    <div className={cn("absolute bottom-0 right-30 z-30 font-text-primary text-[20rem] max-sm:text-[10rem] text-center ",className)} >
     <Carousel
     opts={{
       align: "start",

@@ -80,19 +80,24 @@ export default function ThreeD() {
           <h1>{selectedModel.title.toUpperCase()}</h1>
         </motion.div>
       </AnimatePresence>    
+      
+      <ModelCarousel className="max-sm:hidden" models={models} handleModelSelect={handleModelSelect} />  
 
-      <ModelCarousel models={models} handleModelSelect={handleModelSelect} />  
 
     </div>
       <div className="relative m-6 w-full font-text-primary flex flex-col items-center gap-10 justify-center">
-        <div className="flex flex-col p-8 gap-2 justify-center items-center ">
+        {/* <div className="flex flex-col p-8 gap-2 justify-center items-center ">
           <h1 className="text-4xl text-center ">LOREM IPSUM</h1>
           <p className="text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque
             incidunt, voluptatibus accusamus nobis alias fugit cum consectetur
             ullam perspiciatis.
           </p>
-        </div>
+        </div> */}
+        <ModelCarousel className="sm:hidden static w-1/2 !mt-2 rounded-md " models={models} handleModelSelect={handleModelSelect} />  
+        <h1 className="text-2xl text-center sm:hidden ">Select To View Model</h1>
+
+
       </div>
       {/* <div className="relative font-text-primary !my-6 flex flex-col items-center gap-6 justify-center">
         <h1 className="text-4xl">LOREM IPSUM</h1>
