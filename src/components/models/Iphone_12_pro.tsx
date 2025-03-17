@@ -85,7 +85,7 @@ type GLTFResult = GLTF & {
 // @ts-ignore
 export function Model(props: JSX.IntrinsicElements['group']) {
   // @ts-ignore
-  const { nodes, materials } = useGLTF('src/assets/models/iphone_12_pro.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/iphone_12_pro.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group position={[0, -2.588, 2.419]}>
