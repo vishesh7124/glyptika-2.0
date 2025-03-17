@@ -8,9 +8,10 @@ Title: 2020 Apollo Intensa Emozione Orange Dragon
 */
 
 import * as THREE from 'three'
-import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
+// @ts-ignore
+
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -1129,10 +1130,12 @@ type GLTFResult = GLTF & {
     aApollo_IntensaEmozioneOrangeDragon_2019_CallipersCallip_ba9d355: THREE.MeshStandardMaterial
     aApollo_IntensaEmozioneOrangeDragon_2019_CallipersCallip_34ef476: THREE.MeshStandardMaterial
   }
+  // @ts-ignore
   animations: GLTFAction[]
 }
-
+// @ts-ignore
 export  function Car(props: JSX.IntrinsicElements['group']) {
+  // @ts-ignore
   const { nodes, materials } = useGLTF('src/assets/models/car.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
