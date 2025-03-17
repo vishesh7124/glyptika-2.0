@@ -1136,7 +1136,7 @@ type GLTFResult = GLTF & {
 // @ts-ignore
 export  function Car(props: JSX.IntrinsicElements['group']) {
   // @ts-ignore
-  const { nodes, materials } = useGLTF('src/assets/models/car.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/car.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -2264,4 +2264,4 @@ export  function Car(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('src/assets/models/car.glb')
+useGLTF.preload('/car.glb')

@@ -47,7 +47,7 @@ type GLTFResult = GLTF & {
 // @ts-ignore
 export  function Ship(props: JSX.IntrinsicElements['group']) {
   // @ts-ignore
-  const { nodes, materials } = useGLTF('src/assets/models/ship.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/ship.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -68,4 +68,4 @@ export  function Ship(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('src/assets/models/ship.glb')
+useGLTF.preload('/ship.glb')
