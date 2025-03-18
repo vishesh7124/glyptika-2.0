@@ -1,5 +1,4 @@
 
-import { MarqueeDemoVertical } from "@/components/AnimatedGallery";
 import videoLogo from '../assets/images/video_logo.png'
 import { useState } from "react";
 import { NavLink } from "react-router";
@@ -169,12 +168,8 @@ export default function Services() {
                 </motion.div>
             ))}
         </div>
-        {/* <MarqueeDemoVertical /> */}
       </div>
-      {/* <div className="relative font-text-primary !my-6 flex flex-col items-center gap-6 justify-center">
-        <h1 className="text-4xl">LOREM IPSUM</h1>
-        <Button className="bg-[#5EC2B5] p-4 rounded-3xl" >Get in Touch</Button>
-      </div> */}
+
     </>
   );
 }
