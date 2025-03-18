@@ -14,6 +14,7 @@ import Projects from "./pages/Projects"
 import ProjectDetails from "./pages/ProjectDetails"
 import ThreeD from "./pages/3D"
 import Services from "./pages/Services"
+import Contact from "./pages/Contact"
 
 
 
@@ -34,6 +35,7 @@ function App() {
 
           <Route path="/3d" element={<ThreeD/>} />
           <Route path="/services" element={<Services/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
         <Footer/>
       </AuroraBackground   >
