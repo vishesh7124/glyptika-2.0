@@ -7,11 +7,12 @@ import Loader from './Loader';
 interface LazyMediaProps {
     mediaType: 'image' | 'video';
     src: string | undefined;
+    controls?: boolean;
 }
 
 
 
-const LazyMedia = ({mediaType,src}:LazyMediaProps) => {
+const LazyMedia = ({mediaType,src,controls}:LazyMediaProps) => {
     const [loading, setLoading] = useState(true)
 
         return (
@@ -23,11 +24,11 @@ const LazyMedia = ({mediaType,src}:LazyMediaProps) => {
                     {mediaType==='video'? 
                     <video
                     src={src}
-                    className={`w-full h-full rounded-md object-fill  ${loading?"opacity-0":"opacity-100"}  `}
+                    className={`w-full h-full rounded-md object-fill  ${loading?"opacity-0 hidden ":"opacity-100"}  `}
                     autoPlay
                     loop
                     muted
-                    
+                    controls={controls}
                     
                     onCanPlayThrough={()=>setLoading(false)}
                     
@@ -36,7 +37,7 @@ const LazyMedia = ({mediaType,src}:LazyMediaProps) => {
 
                     <img
                     src={src}
-                    className={`w-full h-full rounded-md object-fill  ${loading?"opacity-0":"opacity-100"}  `}
+                    className={`w-full h-full rounded-md object-fill  ${loading?"opacity-0 hidden":"opacity-100"}  `}
 
                     onLoad={()=>setLoading(false)}
                     

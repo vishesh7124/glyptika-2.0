@@ -13,6 +13,7 @@ import Landings from "./pages/Landings"
 import Projects from "./pages/Projects"
 import ProjectDetails from "./pages/ProjectDetails"
 import ThreeD from "./pages/3D"
+import Services from "./pages/Services"
 
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="projects/:pid" element={<ProjectDetails/>} />
 
           <Route path="/3d" element={<ThreeD/>} />
+          <Route path="/services" element={<Services/>} />
         </Routes>
         <Footer/>
       </AuroraBackground   >
