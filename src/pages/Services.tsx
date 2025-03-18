@@ -139,10 +139,10 @@ export default function Services() {
             </div>
             <div className="flex flex-col gap-2">
                 {serviceData[currentService].description.map((desc, index) => (
-                    <div className="flex gap-1">
+                    <div key={index} className="flex gap-1">
 
                         <SquareCheckBig className="h-4 w-4" />
-                        <p key={index} className="font-text-primary text-sm">{desc}</p>
+                        <p  className="font-text-primary text-sm">{desc}</p>
                     </div>
                 ))}
             </div>
