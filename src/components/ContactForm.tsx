@@ -3,6 +3,8 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
+import emailjs from '@emailjs/browser';
+
 
 import { Button } from "@/components/ui/button"
 import {
@@ -42,6 +44,28 @@ export default function ContactForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
+
+        const service_id = 'service_gxz9sm8'
+        const template_id = 'template_2h41989'
+        const public_key = 'emtVCf7DKKt-U0J5j'
+        const templateParams ={
+            from_name: values.name,
+            from_email: values.email,
+            from_phone: values.phone,
+            budget: values.budget,
+            to_name : 'Glyptika',
+            message:values.projectDetails,    
+        }
+        emailjs.send(service_id, template_id, templateParams, public_key).then(
+            (response) => {
+              console.log('SUCCESS!', response.status, response.text);
+            },
+            (error) => {
+              console.log('FAILED...', error);
+            },
+        )
+
+
     console.log(values)
   }
 
