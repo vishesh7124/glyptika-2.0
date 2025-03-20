@@ -66,7 +66,6 @@ export default function ContactForm() {
         )
 
 
-    console.log(values)
   }
 
   return (

@@ -34,7 +34,6 @@ const reviews = [
 
 const firstRow = reviews.slice(0, 2);
 const secondRow = reviews.slice(2,4);
-console.log(secondRow)
 
 const ReviewCard = ({
   img,

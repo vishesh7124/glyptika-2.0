@@ -60,7 +60,6 @@ export default function ThreeD() {
   const handleModelSelect = (i: number) => {
     const model = models[i];
     setSelectedModel(model);
-    console.log(`Selected model: ${selectedModel.url}`);
   };
 
   return (
