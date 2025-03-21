@@ -13,8 +13,8 @@ export default function Landings() {
     <>
       <div className="relative !mx-auto w-full font-text-primary flex max-sm:flex-col-reverse max-sm:gap-1 items-center gap-10 justify-center">
         <div className="flex flex-col w-11/12 p-8 gap-8 justify-center items-start max-sm:items-center ">
-          <h1 className="text-4xl  text-left max-sm:text-center ">{project?.name.toUpperCase()}</h1>
-          <p className="text-left  max-sm:text-center"> 
+          <h1 className="text-4xl  text-left font-text-primary max-sm:text-center ">{project?.name.toUpperCase()}</h1>
+          <p className="text-left font-text-tertiary  max-sm:text-center"> 
             {project?.details}
           </p>
         </div>

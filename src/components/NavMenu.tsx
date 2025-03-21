@@ -39,8 +39,8 @@ const NavMenu = ()=>{
                     <NavLink key={index} to={item.route} className="animations hover:bg-[#5EC2B5] hover:cursor-pointer w-1/2 h-full  max-sm:h-1/2 max-sm:w-full flex justify-between items-center rounded-md gap-3 bg-[#000000b3] ">
                         <img src={item.img} alt="" className=" rounded-l-md h-36 w-1/2 max-sm:w-44  object-fill"  />
                         <div className="desc w-1/2  flex flex-col justify-between gap-5 items-start max-sm:w-full   ">
-                            <h3 className="text-xl" >{item.title}</h3>
-                            <p className="text-sm" >{item.description}</p>
+                            <h3 className="text-xl font-text-primary " >{item.title}</h3>
+                            <p className="text-sm font-text-tertiary " >{item.description}</p>
                         </div>
                     </NavLink>
 

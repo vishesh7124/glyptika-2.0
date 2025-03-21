@@ -19,7 +19,7 @@ import Contact from "./pages/Contact"
 
 
 function App() {
-  // const [count, setCount] = useState(0)  
+
 
   return (
     <div className="h-full w-full">

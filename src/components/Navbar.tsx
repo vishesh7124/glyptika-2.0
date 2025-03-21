@@ -11,11 +11,11 @@ const Navbar = () => {
 
 
   return (
-    <nav className= {` flex justify-between sm:flex sm:justify-between rounded-b-3xl items-center p-[0.8rem] font-text-primary bg-[#000000b3] max-sm:${menuOpen?'flex w-full flex-col gap-6 justify-center items-center':''} `}  >
+    <nav className= {` flex justify-between sm:flex sm:justify-between rounded-b-3xl items-center p-[0.8rem] bg-[#000000b3] max-sm:${menuOpen?'flex w-full flex-col gap-6 justify-center items-center':''} `}  >
         {(!menuOpen)?
           <>
-            <h1>GLYPTIKA</h1>
-            <div className="links flex justify-between max-sm:hidden  gap-8">
+            <h1 className="font-text-primary text-2xl ">GLYPTIKA</h1>
+            <div className="links flex justify-between max-sm:hidden font-text-secondary  gap-8">
                 <NavLink to="/" className="hover:text-[#5EC2B5]" >HOME</NavLink>
                 <NavMenu/>
                 <NavLink to="/services" className="hover:text-[#5EC2B5]">SERVICES</NavLink>

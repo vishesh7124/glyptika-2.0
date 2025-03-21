@@ -4,8 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: 'Kdam Thmor';
-  src: url('./assets/KdamThmorPro-Regular.ttf');
+  font-family: 'Pulsar';
+  src: url('./assets/Pulsar-Original.otf');
+}
+@font-face {
+  font-family: 'Anek';
+  src: url('./assets/Oswald-Regular.ttf');
+}
+@font-face {
+  font-family: 'Aileron';
+  src: url('./assets/Aileron-Regular.otf');
 }
 
 /* ---break---
@@ -43,7 +51,7 @@
   html,body{
     padding: 0;
     min-height: 100vh; 
-    background: white;
+    /* background: white; */
     /* background: linear-gradient(to top, #04050c 0%, #040b13 50%, #000000 100%); */
     background: black;
     color: white;
@@ -52,7 +60,9 @@
 }  
 
 @theme{
-  --font-text-primary: 'Kdam Thmor';
+  --font-text-primary: 'Pulsar';
+  --font-text-secondary: 'Anek';
+  --font-text-tertiary: 'Aileron';
 }
 
 /* ---break---
