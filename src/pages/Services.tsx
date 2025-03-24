@@ -1,5 +1,9 @@
 
 import videoLogo from '../assets/images/video_logo.png'
+import designLogo from '../assets/images/a.png'
+import rigImg from '../assets/images/rig.webp'
+import architectural from '../assets/images/Night_1.png'
+
 import { useState } from "react";
 import { NavLink } from "react-router";
 import {motion} from "motion/react"
@@ -36,26 +40,15 @@ const serviceData: service[] = [
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "video",
-            url: "https://res.cloudinary.com/duifdyecp/video/upload/AlphaTreadShoes_kwksls.mp4",
-            name: "Alpha Tread"
+            url: "https://res.cloudinary.com/duifdyecp/video/upload/Samsung_p43jvk.mp4",
+            name: "Samsung AX"
         },
         logos:[
             {
                 name: "Blender",
                 url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
             },
-            {
-                name: "Blender",
-                url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
-            },
-            {
-                name: "Blender",
-                url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
-            },
-            {
-                name: "Blender",
-                url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
-            },
+
             {
                 name: "Premiere Pro",
                 url: "https://res.cloudinary.com/duifdyecp/image/upload/premiere_nizzta.png"
@@ -70,7 +63,7 @@ const serviceData: service[] = [
         media: {
             mediaType: "image",
             url: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
-            name: "Alpha Tread"
+            name: "Graphic Design"
         },
         logos:[
             {
@@ -78,17 +71,17 @@ const serviceData: service[] = [
                 url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
             }
         ],
-        image:videoLogo
+        image:designLogo
 
     },
     {
-        id: 2,
-        title: "2D/3D Design",
+        id: 3,
+        title: "3D Rigging",
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "image",
             url: "https://res.cloudinary.com/duifdyecp/video/upload/AlphaTreadShoes_kwksls.mp4",
-            name: "Alpha Tread"
+            name: "Rigged Model"
         },
         logos:[
             {
@@ -96,17 +89,17 @@ const serviceData: service[] = [
                 url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
             }
         ],
-        image:videoLogo
+        image:rigImg
 
     },
     {
-        id: 2,
-        title: "2D/3D Design",
+        id: 4,
+        title: "Architectural Rendering",
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "image",
-            url: "https://res.cloudinary.com/duifdyecp/video/upload/AlphaTreadShoes_kwksls.mp4",
-            name: "Alpha Tread"
+            url: "https://res.cloudinary.com/duifdyecp/image/upload/Night_2_ogl9ui.webp",
+            name: "House Exterior"
         },
         logos:[
             {
@@ -114,7 +107,7 @@ const serviceData: service[] = [
                 url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
             }
         ],
-        image:videoLogo
+        image:architectural
 
         
     },

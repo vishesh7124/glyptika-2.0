@@ -3,8 +3,8 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import imgpg1 from "@/assets/images/a.png"
-import imgpg2 from "@/assets/images/cycles_render.png"
+import imgpg1 from "@/assets/images/nav-image1.webp"
+import imgpg2 from "@/assets/images/nav-image2.webp"
 import { NavLink } from "react-router";
 
 type NavMenuItems = {
