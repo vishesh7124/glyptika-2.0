@@ -146,7 +146,7 @@ export default function Services() {
                     </div>
                 ))}
             </div>
-            <div className="flex justify-between w-full items-end">
+            <div className="flex max-sm:flex-col max-sm:items-center max-sm:gap-4 justify-between w-full items-end">
                 <div className="flex flex-wrap gap-4">
                     {serviceData[currentService].logos.map((logo, index) => (
                         <img key={index} src={logo.url} alt="" className="h-16 w-16 rounded-2xl object-contain " />

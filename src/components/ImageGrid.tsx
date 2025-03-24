@@ -14,7 +14,7 @@ const gridPattern = ["col-span-1", "col-span-1",  "col-span-1", "col-span-2","co
 export default function ImageGrid({projectImg}:ImagGridProp) {
   
   return (
-    <BentoGrid className="w-screen grid-cols-2 max-sm:auto-rows-[15rem] md:auto-rows-[15rem] lg:auto-rows-[12rem]">
+    <BentoGrid className="w-screen grid-cols-2 max-sm:auto-rows-[15rem] md:auto-rows-[15rem] lg:auto-rows-[12rem]  ">
       {projectImg?.map((img, i) => (
         <BentoGridItem
           key={i}

@@ -6,6 +6,7 @@ import ImageGrid from "@/components/ImageGrid";
 
 
 
+
 export default function Landings() {
   const params = useParams();
   const project = projectItems.find((item) => item.public_id === params.pid);
@@ -28,7 +29,7 @@ export default function Landings() {
             frameBorder="0"
           ></iframe>
       </div>
-      <BehindRender/>
+      <BehindRender images={project?.renderItems ?? []} />
       <div className="relative font-text-primary !my-6 flex flex-col items-center gap-10 justify-center">
         <h1 className="text-3xl" >GALLERY</h1>
         <ImageGrid projectImg={project?.galleryItems} />

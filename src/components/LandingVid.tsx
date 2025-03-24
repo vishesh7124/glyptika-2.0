@@ -77,7 +77,7 @@ const LandingVideo = () => {
       <NavLink
         to="/projects"
 
-        className="absolute bottom-2 right-4 font-text-primary text-white text-sm hover:text-[#5EC2B5] transition-colors"
+        className="absolute bottom-2 right-4 font-text-primary text-white text-xl hover:text-[#5EC2B5] transition-colors"
       >
         PROJECTS {'>>'}
       </NavLink>

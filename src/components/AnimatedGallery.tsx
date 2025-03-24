@@ -3,7 +3,10 @@ import { Marquee } from "./magicui/marquee";
 import img1 from '../assets/images/forest.png'
 import img2 from '../assets/images/cycles_render.png'
 import img3 from '../assets/images/Night_2.png'
-import img4 from '../assets/images/a.png'
+import img4 from '../assets/images/Night_1.png'
+import img5 from '../assets/images/Doubleroom.png'
+import img6 from '../assets/images/singleroom.png'
+
 
 const reviews = [
   {
@@ -30,10 +33,23 @@ const reviews = [
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: img4
   },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: img5
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: img6
+  },
 ];
 
 const firstRow = reviews.slice(0, 2);
 const secondRow = reviews.slice(2,4);
+const thirdRow = reviews.slice(4,6)
 
 const ReviewCard = ({
   img,
@@ -88,7 +104,7 @@ export function MarqueeDemoVertical() {
         ))}
       </Marquee>
       <Marquee  pauseOnHover vertical className=" max-sm:hidden [--duration:20s]">
-        {secondRow.map((review) => (
+        {thirdRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
