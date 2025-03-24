@@ -27,11 +27,9 @@ export default function Contact() {
     <>
       <div className="relative max-sm:p-8 max-sm:!mb-14 !mb-6 w-full font-text-primary flex flex-col items-center gap-6 justify-center">
         <div className="flex flex-col p-6 pb-0 gap-6 justify-center items-center ">
-          <h1 className="text-4xl text-center ">LOREM IPSUM</h1>
-          <p className="text-center sm:max-w-1/2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque
-            incidunt, voluptatibus accusamus nobis alias fugit cum consectetur
-            ullam perspiciatis.
+          <h1 className="text-4xl text-center font-text-primary ">Collaborate With Us </h1>
+          <p className="text-center sm:max-w-1/2 font-text-tertiary ">
+          Share your ideas and let us craft unique designs and animations tailored to your vision.
           </p>
         </div>
         <div className="flex  gap-12 justify-center items-center ">

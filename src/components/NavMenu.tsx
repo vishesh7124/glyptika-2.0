@@ -19,14 +19,14 @@ const navMenuItems:NavMenuItems[] =[
         "route":"/projects",
         "img":imgpg1,
         "title":"Animations",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, minus!"
+        "description":"Dive into dynamic visuals and storytelling brought to life through stunning animations."
 
     },
     {
         "route":"/3d",
         "img":imgpg2,
         "title":"3D Models",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, minus!"
+        "description":"Explore lifelike 3D creations, from sleek designs to detailed environments, crafted to perfection."
     }
 ]
 
