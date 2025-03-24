@@ -135,7 +135,7 @@ export default function Services() {
                     <div key={index} className="flex gap-1">
 
                         <SquareCheckBig className="h-4 w-4" />
-                        <p  className="font-text-primary text-sm">{desc}</p>
+                        <p  className="font-text-tertiary text-sm">{desc}</p>
                     </div>
                 ))}
             </div>
@@ -145,7 +145,7 @@ export default function Services() {
                         <img key={index} src={logo.url} alt="" className="h-16 w-16 rounded-2xl object-contain " />
                     ))}
                 </div>
-                <Button className="bg-[#5EC2B5] p-4 rounded-3xl font-text-primary  " ><NavLink to="/contact">Talk To Us</NavLink></Button>
+                <Button className="bg-[#5EC2B5] p-4 rounded-3xl font-text-secondary  " ><NavLink to="/contact">Talk To Us</NavLink></Button>
 
             </div>
 
