@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import vid1 from '../assets/videos/AlphaTreadShoes.mp4'
-import vid2 from '../assets/videos/Samsung.mp4'
+// import vid1 from '../assets/videos/AlphaTreadShoes.mp4'
+// import vid2 from '../assets/videos/Samsung.mp4'
 import { NavLink } from "react-router";
 
 interface Video {
@@ -12,24 +12,20 @@ interface Video {
 const videos: Video[] = [
   {
     id: 1,
-    url: vid1,
+    url: "https://res.cloudinary.com/duifdyecp/video/upload/AlphaTreadShoes_kwksls.mp4",
     title: "Video 1",
   },
   {
     id: 2,
-    url: vid2,
+    url: "https://res.cloudinary.com/duifdyecp/video/upload/Samsung.mp4",
     title: "Video 1",
   },
   {
     id: 3,
-    url: vid1,
+    url: "https://res.cloudinary.com/duifdyecp/video/upload/bgmi_aq8uwc.mp4",
     title: "Video 1",
   },
-  {
-    id: 4,
-    url:vid2,
-    title: "Video 1",
-  },
+
 ];
 
 const LandingVideo = () => {
