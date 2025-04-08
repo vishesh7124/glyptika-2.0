@@ -10,15 +10,15 @@ type logo = {
 const logos: logo[] = [
   {
     name: "Blender",
-    url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png",
+    url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png",
   },
   {
-    name: "Blender",
-    url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png",
+    name: "Unreal",
+    url: "https://ik.imagekit.io/8ubfxvx6t/Logos/unreal.png",
   },
   {
-    name: "Premiere Pro",
-    url: "https://res.cloudinary.com/duifdyecp/image/upload/premiere_nizzta.png",
+    name: "Revit",
+    url: "https://ik.imagekit.io/8ubfxvx6t/Logos/revit.png",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function Contact() {
         </div>
         <div className="flex  gap-12 justify-center items-center ">
             {logos.map((logo,index)=>(
-                <img key={index} src={logo.url} alt="" className="h-12 w-12 rounded-2xl object-fill " />
+                <img key={index} src={logo.url} alt="" className="h-12 w-12 rounded-2xl object-contain " />
             ))}
         </div>
         <motion.div initial={{y:600}} animate={{y:0, transition:{duration:1,delay:0.5,type:"spring",bounce:0.5}}} className="flex flex-col p-8 gap-2 justify-center items-center bg-[#000000b3] rounded-md ">
