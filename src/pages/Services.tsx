@@ -40,18 +40,22 @@ const serviceData: service[] = [
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "video",
-            url: "https://res.cloudinary.com/duifdyecp/video/upload/Samsung_p43jvk.mp4",
+            url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Samsung/Samsung.mp4",
             name: "Samsung AX"
         },
         logos:[
             {
                 name: "Blender",
-                url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png"
+            },
+            {
+                name: "Unreal",
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/unreal.png"
             },
 
             {
                 name: "Premiere Pro",
-                url: "https://res.cloudinary.com/duifdyecp/image/upload/premiere_nizzta.png"
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/premiere_logo.png"
             }
         ],
         image:videoLogo
@@ -62,14 +66,22 @@ const serviceData: service[] = [
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "image",
-            url: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
+            url: "https://ik.imagekit.io/8ubfxvx6t/Graphics/a.png?updatedAt=1744118037307",
             name: "Graphic Design"
         },
         logos:[
             {
                 name: "blender",
-                url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
-            }
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png"
+            },
+            {
+                name: "ae",
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/effects_logo.png"
+            },
+            {
+                name: "illustrator",
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/illustrator_logo.png"
+            },
         ],
         image:designLogo
 
@@ -80,14 +92,22 @@ const serviceData: service[] = [
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "image",
-            url: "https://res.cloudinary.com/duifdyecp/video/upload/AlphaTreadShoes_kwksls.mp4",
+            url: "https://ik.imagekit.io/8ubfxvx6t/Graphics/rig.webp",
             name: "Rigged Model"
         },
         logos:[
             {
                 name: "blender",
-                url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
-            }
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png"
+            },
+            {
+                name: "Unreal",
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/unreal.png"
+            },
+            {
+                name: "revit",
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/revit.png"
+            },
         ],
         image:rigImg
 
@@ -98,14 +118,18 @@ const serviceData: service[] = [
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "image",
-            url: "https://res.cloudinary.com/duifdyecp/image/upload/Night_2_ogl9ui.webp",
+            url: "https://ik.imagekit.io/8ubfxvx6t/Graphics/Architectural%20Rendering/Night_2.webp",
             name: "House Exterior"
         },
         logos:[
             {
                 name: "blender",
-                url: "https://res.cloudinary.com/duifdyecp/image/upload/blender_mxqeeq.png"
-            }
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png"
+            },
+            {
+                name: "revit",
+                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/revit.png"
+            },
         ],
         image:architectural
 

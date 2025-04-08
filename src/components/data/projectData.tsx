@@ -112,6 +112,24 @@ export const projectItems: ProjectItem[] = [
     className:"md:col-span-2"
   },
   {
+    id:9,
+    name:"Orientation",
+    title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. ",
+    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam excepturi odio tempora repellat voluptas voluptatem, nulla reprehenderit! Dolores, odit? Tempora maiores nulla sint possimus, aperiam perspiciatis eius mollitia quia iusto veritatis deserunt veniam assumenda commodi, maxime dolor laudantium ratione pariatur! Doloribus maxime dolorum non quaerat ullam amet totam eligendi accusamus ex cumque quasi voluptates, dolore voluptatum, commodi quod ipsum saepe. Tempore minus aliquid ipsum maxime nisi fugit cum et?",
+    mediaType: "video",
+    public_id:"Orientation_comp.mp4",
+    route:`Experiential/Orientation/Orientation_comp.mp4`,
+    galleryItems: [
+      `${baseUrlImg}/forest_usuleo.png`,
+      `${baseUrlImg}/cycles_render_qsvx7z.png`,
+    ],
+    renderItems:[
+      `${baseUrlImg}/1.jpg`,
+      `${baseUrlImg}/3.jpg`,
+    ],
+    className:"md:col-span-3"
+  },
+  {
     id:5,
     name:"Mercedes",
     title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. ",
@@ -136,6 +154,42 @@ export const projectItems: ProjectItem[] = [
     className:"md:col-span-3"
   },
   {
+    id:7,
+    name:"ESports",
+    title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. ",
+    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam excepturi odio tempora repellat voluptas voluptatem, nulla reprehenderit! Dolores, odit? Tempora maiores nulla sint possimus, aperiam perspiciatis eius mollitia quia iusto veritatis deserunt veniam assumenda commodi, maxime dolor laudantium ratione pariatur! Doloribus maxime dolorum non quaerat ullam amet totam eligendi accusamus ex cumque quasi voluptates, dolore voluptatum, commodi quod ipsum saepe. Tempore minus aliquid ipsum maxime nisi fugit cum et?",
+    mediaType: "video",
+    public_id:"esports.mp4",
+    route:`Experiential/Esports/esports.mp4`,
+    galleryItems: [
+      `${baseUrlImg}/forest_usuleo.png`,
+      `${baseUrlImg}/cycles_render_qsvx7z.png`,
+    ],
+    renderItems:[
+      `${baseUrlImg}/1.jpg`,
+      `${baseUrlImg}/3.jpg`,
+    ],
+    className:"md:col-span-2"
+  },
+  {
+    id:8,
+    name:"Stumble Guys",
+    title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. ",
+    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam excepturi odio tempora repellat voluptas voluptatem, nulla reprehenderit! Dolores, odit? Tempora maiores nulla sint possimus, aperiam perspiciatis eius mollitia quia iusto veritatis deserunt veniam assumenda commodi, maxime dolor laudantium ratione pariatur! Doloribus maxime dolorum non quaerat ullam amet totam eligendi accusamus ex cumque quasi voluptates, dolore voluptatum, commodi quod ipsum saepe. Tempore minus aliquid ipsum maxime nisi fugit cum et?",
+    mediaType: "video",
+    public_id:"stumble%20guys.mp4",
+    route:`Experiential/Stumble/stumble%20guys.mp4`,
+    galleryItems: [
+      `${baseUrlImg}/forest_usuleo.png`,
+      `${baseUrlImg}/cycles_render_qsvx7z.png`,
+    ],
+    renderItems:[
+      `${baseUrlImg}/1.jpg`,
+      `${baseUrlImg}/3.jpg`,
+    ],
+    className:"md:col-span-1"
+  },
+  {
     id:6,
     name:"BGMI",
     title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. ",
@@ -157,61 +211,7 @@ export const projectItems: ProjectItem[] = [
       `${baseUrlImg}/1.jpg`,
       `${baseUrlImg}/3.jpg`,
     ],
-    className:"md:col-span-2"
-  },
-  {
-    id:7,
-    name:"ESports",
-    title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. ",
-    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam excepturi odio tempora repellat voluptas voluptatem, nulla reprehenderit! Dolores, odit? Tempora maiores nulla sint possimus, aperiam perspiciatis eius mollitia quia iusto veritatis deserunt veniam assumenda commodi, maxime dolor laudantium ratione pariatur! Doloribus maxime dolorum non quaerat ullam amet totam eligendi accusamus ex cumque quasi voluptates, dolore voluptatum, commodi quod ipsum saepe. Tempore minus aliquid ipsum maxime nisi fugit cum et?",
-    mediaType: "video",
-    public_id:"esports.mp4",
-    route:`Experiential/Esports/esports.mp4`,
-    galleryItems: [
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
-    className:"md:col-span-1"
-  },
-  {
-    id:8,
-    name:"Stumble Guys",
-    title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. ",
-    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam excepturi odio tempora repellat voluptas voluptatem, nulla reprehenderit! Dolores, odit? Tempora maiores nulla sint possimus, aperiam perspiciatis eius mollitia quia iusto veritatis deserunt veniam assumenda commodi, maxime dolor laudantium ratione pariatur! Doloribus maxime dolorum non quaerat ullam amet totam eligendi accusamus ex cumque quasi voluptates, dolore voluptatum, commodi quod ipsum saepe. Tempore minus aliquid ipsum maxime nisi fugit cum et?",
-    mediaType: "video",
-    public_id:"stumble%20guys.mp4",
-    route:`Experiential/Stumble/stumble%20guys.mp4`,
-    galleryItems: [
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
-    className:"md:col-span-1"
-  },
-  {
-    id:9,
-    name:"Orientation",
-    title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. ",
-    details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam excepturi odio tempora repellat voluptas voluptatem, nulla reprehenderit! Dolores, odit? Tempora maiores nulla sint possimus, aperiam perspiciatis eius mollitia quia iusto veritatis deserunt veniam assumenda commodi, maxime dolor laudantium ratione pariatur! Doloribus maxime dolorum non quaerat ullam amet totam eligendi accusamus ex cumque quasi voluptates, dolore voluptatum, commodi quod ipsum saepe. Tempore minus aliquid ipsum maxime nisi fugit cum et?",
-    mediaType: "video",
-    public_id:"Orientation_comp.mp4",
-    route:`Experiential/Orientation/Orientation_comp.mp4`,
-    galleryItems: [
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
-    className:"md:col-span-2"
+    className:"md:col-span-3"
   },
   
 ];
