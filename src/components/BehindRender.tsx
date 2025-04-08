@@ -7,12 +7,14 @@ interface Props {
 }
 
 export default function BehindRender({images}:Props) {
+  const baseUrl:String="https://ik.imagekit.io/8ubfxvx6t/Animations/"
+
   return (
     <div className="relative font-text-primary !my-20 max-sm:!my-10 flex flex-col items-center gap-14 justify-center">
        <h1 className="text-3xl" >BEHIND THE RENDER</h1> 
       <Compare
-        firstImage={images[0]}
-        secondImage={images[1]}
+        firstImage={baseUrl + images[0]}
+        secondImage={baseUrl + images[1]}
         firstImageClassName="object-fill object-left-top"
         secondImageClassname="object-fill object-left-top"
         className="h-[300px] w-[320px] md:h-[500px] md:w-6/12"

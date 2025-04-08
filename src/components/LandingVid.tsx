@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 // import vid1 from '../assets/videos/AlphaTreadShoes.mp4'
 // import vid2 from '../assets/videos/Samsung.mp4'
 import { NavLink } from "react-router";
+// import MuxVideo from '@mux/mux-video-react';
+
 
 interface Video {
   id: number;
@@ -12,17 +14,17 @@ interface Video {
 const videos: Video[] = [
   {
     id: 1,
-    url: "https://res.cloudinary.com/duifdyecp/video/upload/AlphaTreadShoes_kwksls.mp4",
+    url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Alpha/AlphaTreadShoes.mp4",
     title: "Video 1",
   },
   {
     id: 2,
-    url: "https://res.cloudinary.com/duifdyecp/video/upload/Samsung.mp4",
+    url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Samsung/Samsung.mp4",
     title: "Video 1",
   },
   {
     id: 3,
-    url: "https://res.cloudinary.com/duifdyecp/video/upload/bgmi_aq8uwc.mp4",
+    url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Experiential/bgmi/bgmi.mp4",
     title: "Video 1",
   },
 
@@ -48,6 +50,20 @@ const LandingVideo = () => {
 
   return (
     <div className="relative h-[89vh] w-[95vw] max-[960px]:h-[60vh] rounded-md bg-black !m-auto max-sm:h-[30vh] ">
+      {/* <MuxVideo
+        ref={videoRef}
+        src={videos[currentVideo].url}
+        // metadata={{
+        //   video_id: 'video-id-123456',
+        //   video_title: 'Super Interesting Video',
+        //   viewer_user_id: 'user-id-bc-789',
+        // }}
+        className="  w-full h-full rounded-md object-fill  "
+        onEnded={handleVideoEnd}
+        autoplay
+        muted
+        // controls
+      /> */}
       <video
         ref={videoRef}
         src={videos[currentVideo].url}

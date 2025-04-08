@@ -13,6 +13,7 @@ import ModelCarousel from "@/components/ModelCarousel";
 import { Ship } from "../components/models/Ship";
 import { Model } from "../components/models/Iphone_12_pro";
 import { Car } from "../components/models/Car";
+import {Mercedes} from "../components/models/Bmw"
 
 interface model {
   id: number;
@@ -37,14 +38,14 @@ const models: model[] = [
   },
   {
     id: 3,
-    url: Ship,
-    title: "Ship",
+    url: Mercedes,
+    title: "Mercedes",
     thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
   },
   {
     id: 4,
-    url: Model,
-    title: "I phone 2",
+    url: Ship,
+    title: "Ship",
     thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
   },
   {
