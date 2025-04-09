@@ -67,7 +67,7 @@ export default function ProjectDetails() {
                 },
               }),
             }}
-            className="text-4xl  text-left font-text-primary max-sm:text-center "
+            className="text-6xl text-[#5EC2B5]  text-left font-text-primary max-sm:text-center "
             by="character"
           >
             {project?.name.toUpperCase()}
@@ -104,12 +104,12 @@ export default function ProjectDetails() {
       )}
       {project?.galleryItems && (
         <div className="relative font-text-primary !my-6 flex flex-col items-center gap-10 justify-center">
-          <h1 className="text-3xl">GALLERY</h1>
+          <h1 className="text-3xl text-[#5EC2B5]">GALLERY</h1>
           <ImageGrid projectImg={project?.galleryItems} />
         </div>
       )}
       <div className="relative font-text-primary !my-6 flex flex-col items-center gap-10 justify-center">
-        <h1 className="text-3xl">Explore More Projects</h1>
+        <h1 className="text-3xl text-[#5EC2B5]">Explore More Projects</h1>
         <Marquee pauseOnHover className="[--duration:20s]">
           {projectItems.map((item, index) => (
             <figure

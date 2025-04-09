@@ -11,7 +11,7 @@ export default function BehindRender({images}:Props) {
 
   return (
     <div className="relative font-text-primary !my-20 max-sm:!my-10 flex flex-col items-center gap-14 justify-center">
-       <h1 className="text-3xl" >BEHIND THE RENDER</h1> 
+       <h1 className="text-3xl text-[#5EC2B5]" >BEHIND THE RENDER</h1> 
       <Compare
         firstImage={baseUrl + images[0]}
         secondImage={baseUrl + images[1]}
