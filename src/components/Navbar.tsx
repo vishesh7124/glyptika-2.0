@@ -12,7 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setMenuOpen(false)
-    console.log(menuOpen)
+    window.scrollTo(0, 0);
   }, [location])
   
 

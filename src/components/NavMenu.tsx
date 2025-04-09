@@ -30,7 +30,7 @@ const navMenuItems:NavMenuItems[] =[
     }
 ]
 
-const NavMenu = ({setMenuOpen}:{setMenuOpen?:Function})=>{
+const NavMenu = ()=>{
     return(
         <HoverCard >
             <HoverCardTrigger className="hover:text-[#5EC2B5] hover:cursor-pointer " ><button>PORTFOLIO</button></HoverCardTrigger>
