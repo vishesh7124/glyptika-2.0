@@ -2,6 +2,12 @@ import { useParams } from "react-router";
 import { projectItems } from "@/components/data/projectData";
 import BehindRender from "@/components/BehindRender";
 import ImageGrid from "@/components/ImageGrid";
+import { Marquee } from "@/components/magicui/marquee";
+import { cn } from "@/lib/utils";
+import LazyMedia from "@/components/LazyMedia";
+import { NavLink } from "react-router";
+// import { Marquee } from "./magicui/marquee";
+
 
 export default function ProjectDetails() {
   
@@ -9,6 +15,9 @@ export default function ProjectDetails() {
   const project = projectItems.find(
     (item) => item.public_id === encodeURIComponent(params.pid ?? "")
   );
+
+  const baseUrl:String="https://ik.imagekit.io/8ubfxvx6t/Animations/"
+
 
 
   return (
@@ -39,11 +48,41 @@ export default function ProjectDetails() {
         >
         </iframe>
       </div>
+      {project?.renderItems && 
+      
       <BehindRender images={project?.renderItems ?? []} />
-      <div className="relative font-text-primary !my-6 flex flex-col items-center gap-10 justify-center">
-        <h1 className="text-3xl">GALLERY</h1>
-        <ImageGrid projectImg={project?.galleryItems} />
-      </div>
+      }
+      {project?.galleryItems && 
+        <div className="relative font-text-primary !my-6 flex flex-col items-center gap-10 justify-center">
+          <h1 className="text-3xl">GALLERY</h1>
+          <ImageGrid projectImg={project?.galleryItems} />
+        </div>
+      }
+        <div className="relative font-text-primary !my-6 flex flex-col items-center gap-10 justify-center">
+          <h1 className="text-3xl">Explore More Projects</h1>
+          <Marquee pauseOnHover  className="[--duration:20s]">
+            {projectItems.map((item,index) => (
+                  <figure key={index}
+                    className={cn(
+                      "relative max-h-56 w-96 max-sm:w-40 max-sm:max-h-32 max-[960px]:w-56 cursor-pointer overflow-hidden rounded-xl border   ",
+                      // light styles
+                      "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+                      // dark styles
+                      "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+                    )}
+                  >
+                    <div className=" relative h-full flex flex-row items-center">
+                      <NavLink to={`/projects/${item.public_id}`}>
+                        <LazyMedia mediaType={"video"} src={baseUrl + item.route} />
+                      </NavLink>
+                      <div className="absolute top-0 right-0 flex justify-center items-center bg-[#0000003b] h-full w-full not-hover:opacity-0 " >
+                        <p>Click to View</p>
+                      </div>
+                    </div>
+                  </figure>
+            ))}
+          </Marquee>
+        </div>
     </>
   );
 }

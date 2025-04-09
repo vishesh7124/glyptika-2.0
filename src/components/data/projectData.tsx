@@ -8,7 +8,7 @@ type ProjectItem = {
   public_id?: string; //filename - should be unique
   route: string;
   galleryItems?: string[];
-  renderItems:string[];
+  renderItems?:string[];
   className?: string;
 };
 
@@ -24,21 +24,6 @@ export const projectItems: ProjectItem[] = [
     mediaType: "video",
     public_id:"AlphaTreadShoes.mp4", 
     route:`Alpha/AlphaTreadShoes.mp4`,
-    galleryItems: [
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-      `${baseUrlImg}/a_jvvqci.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-      `${baseUrlImg}/a_jvvqci.png`,
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/a_jvvqci.png`,
-      `${baseUrlImg}/forest_usuleo.png`,
-
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
     className:"md:col-span-2"
   },
   {
@@ -49,20 +34,6 @@ export const projectItems: ProjectItem[] = [
     mediaType: "video",
     public_id:"airpods%20animation.mp4",
     route:`Airpods/airpods%20animation.mp4`,
-    galleryItems: [
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-      `${baseUrlImg}/a_jvvqci.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-      `${baseUrlImg}/a_jvvqci.png`,
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/a_jvvqci.png`,
-      `${baseUrlImg}/forest_usuleo.png`,
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
     className:"md:col-span-1"
   },
   {
@@ -73,19 +44,6 @@ export const projectItems: ProjectItem[] = [
     mediaType: "video",
     public_id:"codm_opm.webm",
     route:`Experiential/codm/codm_opm.webm`,
-    galleryItems: [
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/2.jpg`,
-      `${baseUrlImg}/3.jpg`,
-      `${baseUrlImg}/4.jpg`,
-      `${baseUrlImg}/5.jpg`,
-      `${baseUrlImg}/6.jpg`,
-
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
     className:"md:col-span-1"
   },
 
@@ -119,14 +77,6 @@ export const projectItems: ProjectItem[] = [
     mediaType: "video",
     public_id:"Orientation_comp.mp4",
     route:`Experiential/Orientation/Orientation_comp.mp4`,
-    galleryItems: [
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
     className:"md:col-span-3"
   },
   {
@@ -161,14 +111,7 @@ export const projectItems: ProjectItem[] = [
     mediaType: "video",
     public_id:"esports.mp4",
     route:`Experiential/Esports/esports.mp4`,
-    galleryItems: [
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
+
     className:"md:col-span-2"
   },
   {
@@ -179,14 +122,7 @@ export const projectItems: ProjectItem[] = [
     mediaType: "video",
     public_id:"stumble%20guys.mp4",
     route:`Experiential/Stumble/stumble%20guys.mp4`,
-    galleryItems: [
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
+
     className:"md:col-span-1"
   },
   {
@@ -197,20 +133,6 @@ export const projectItems: ProjectItem[] = [
     mediaType: "video",
     public_id:"bgmi.mp4",
     route:`Experiential/bgmi/bgmi.mp4`,
-    galleryItems: [
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-      `${baseUrlImg}/a_jvvqci.png`,
-      `${baseUrlImg}/cycles_render_qsvx7z.png`,
-      `${baseUrlImg}/a_jvvqci.png`,
-      `${baseUrlImg}/forest_usuleo.png`,
-      `${baseUrlImg}/a_jvvqci.png`,
-      `${baseUrlImg}/forest_usuleo.png`,
-    ],
-    renderItems:[
-      `${baseUrlImg}/1.jpg`,
-      `${baseUrlImg}/3.jpg`,
-    ],
     className:"md:col-span-3"
   },
   
