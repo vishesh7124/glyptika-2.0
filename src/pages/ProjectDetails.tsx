@@ -71,14 +71,14 @@ export default function ProjectDetails() {
                       "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
                     )}
                   >
-                    <div className=" relative h-full flex flex-row items-center">
                       <NavLink to={`/projects/${item.public_id}`}>
+                    <div className=" relative h-full flex flex-row items-center">
                         <LazyMedia mediaType={"video"} src={baseUrl + item.route} />
-                      </NavLink>
                       <div className="absolute top-0 right-0 flex justify-center items-center bg-[#0000003b] h-full w-full not-hover:opacity-0 " >
                         <p>Click to View</p>
                       </div>
                     </div>
+                      </NavLink>
                   </figure>
             ))}
           </Marquee>
