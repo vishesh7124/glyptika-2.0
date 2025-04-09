@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 // import vid1 from '../assets/videos/AlphaTreadShoes.mp4'
 // import vid2 from '../assets/videos/Samsung.mp4'
 import { NavLink } from "react-router";
+import { BoxReveal } from "./magicui/box-reveal";
 // import MuxVideo from '@mux/mux-video-react';
 
 
@@ -9,6 +10,7 @@ interface Video {
   id: number;
   url: string;
   title: string;
+  description: string
 }
 
 const videos: Video[] = [
@@ -16,16 +18,19 @@ const videos: Video[] = [
     id: 1,
     url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Alpha/AlphaTreadShoes.mp4",
     title: "Video 1",
+    description: "Blur in by character"
   },
   {
     id: 2,
     url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Samsung/Samsung.mp4",
     title: "Video 1",
+    description: " by character"
   },
   {
     id: 3,
     url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Experiential/bgmi/bgmi.mp4",
     title: "Video 1",
+    description: "character"
   },
 
 ];
@@ -86,6 +91,15 @@ const LandingVideo = () => {
           />
         ))}
       </div>
+      <div className="absolute left-6 bottom-2" >
+          <BoxReveal key={videos[currentVideo].url}  boxColor={"#5EC2B5"} duration={1}>
+            <p className=" font-text-primary text-6xl bg-[#000000b3] rounded-md p-5 ">
+              {videos[currentVideo].description}
+            </p>
+          </BoxReveal>
+
+      </div>
+
       <NavLink
         to="/projects"
 

@@ -13,7 +13,6 @@ type ProjectItem = {
 };
 
 
-const baseUrlImg="https://res.cloudinary.com/duifdyecp/image/upload"
 
 export const projectItems: ProjectItem[] = [
   {
