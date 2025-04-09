@@ -2,6 +2,7 @@ import logo from '../assets/logo/glyptik_logo-only.png'
 import { IconCopyright } from '@tabler/icons-react'
 import { IconBrandLinkedin } from '@tabler/icons-react'
 import { IconBrandInstagram } from '@tabler/icons-react'
+import { Link } from 'react-router'
 
 const Footer = () => {
   return (
@@ -13,10 +14,11 @@ const Footer = () => {
                     <h3 className='text-xl text-[#5EC2B5] ' >Glyptika Studios LLP</h3>
                 </div>
                 <div className="links flex gap-2 max-sm:text-sm font-text-secondary ">
-                    <a href="/" className='hover:text-[#5EC2B5]' >Home</a>
-                    <a href="/" className='hover:text-[#5EC2B5]' >Portfolio</a>
-                    <a href="/" className='hover:text-[#5EC2B5]' >Services</a>
-                    <a href="/" className='hover:text-[#5EC2B5]' >Contact Us</a>
+                    <Link to="/" className='hover:text-[#5EC2B5]' >Home</Link>
+                    <Link to="/projects" className='hover:text-[#5EC2B5]' >Animations</Link>
+                    <Link to="/3d" className='hover:text-[#5EC2B5]' >3D Models</Link>
+                    <Link to="/services" className='hover:text-[#5EC2B5]' >Services</Link>
+                    <Link to="/contact" className='hover:text-[#5EC2B5]' >Contact Us</Link>
                 </div>
             </div>
             <div className="footer-right font-text-tertiary text-[#5EC2B5] flex flex-col items-center justify-center gap-5 max-sm:flex-row max-sm:text-xs max-sm:flex-wrap max-sm:justify-start max-sm:gap-2">
