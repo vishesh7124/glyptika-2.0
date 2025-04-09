@@ -10,7 +10,7 @@ export const BentoGrid = ({
 }) => {
   return (
     <div
-      className={cn("grid lg:auto-rows-[22rem]  max-sm:auto-rows-[27rem] grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto ",className)}
+      className={cn("grid lg:auto-rows-[18rem]  max-sm:auto-rows-[27rem] grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto ",className)}
     >
       {children}
     </div>
@@ -41,7 +41,7 @@ export const BentoGridItem = ({
         containerClassName={` ${title?"min-h-[500px]":"max-sm:h-[200px] max-sm:max-w-[90vw]"} col-span-1 lg:col-span-2 h-full  lg:min-h-[300px]`}
         className=""
       >
-      <div className={` ${title?"h-3/5 max-sm:h-6/12":"h-full  max-sm:h-full"} `}>
+      <div className={` ${title?"h-[70%] max-sm:h-6/12":"h-full  max-sm:h-full"} `}>
         {header}
     
       </div>
