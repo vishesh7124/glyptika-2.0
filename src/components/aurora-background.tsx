@@ -66,7 +66,7 @@ export const AuroraBackground: React.FC<{
                     alpha: true,  
                     antialias: true,
                     precision: "highp",
-                    powerPreference: "high-performance"
+                    powerPreference: "low-power"
                 }}
                 resize={{
                     debounce: 0,
