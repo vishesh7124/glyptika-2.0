@@ -52,7 +52,7 @@ function App() {
           <Route path="/team" element={<Team/>} />
           <Route path="/contact" element={<Contact/>} />
         </Routes>
-        {scrollPosition >= 0.1 && scrollPosition <= 0.8 && (<AnimatePresence>
+        {scrollPosition >= 0.05 && scrollPosition <= 0.9 && (<AnimatePresence>
 
           <motion.div initial={{x:20}} animate={{x:0, transition: {type:"spring", duration: 1, bounce:0.1 }}} exit={{x:0,transition: {type:"spring", duration: 0.5, bounce:0.1 }}} className={`fixed bottom-10 right-7 z-20 `}>
               <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " ><Link to="https://docs.google.com/forms/d/1obUz0QFdiewjhNvsdQd9NvdFcTKiHwtjpcbl0s34XSI/edit?ts=67f7db64" target="_blank"  >Join Us</Link></Button>

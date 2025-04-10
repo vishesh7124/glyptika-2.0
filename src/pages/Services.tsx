@@ -121,7 +121,7 @@ const serviceData: service[] = [
         media: {
             mediaType: "image",
             url: "Graphics/Architectural%20Rendering/Night_2.webp",
-            name: "House Exterior"
+            name: "Exterior Design"
         },
         logos:[
             {
@@ -144,7 +144,7 @@ const serviceData: service[] = [
         media: {
             mediaType: "image",
             url: "Graphics/cycles_render.webp",
-            name: "House Exterior"
+            name: "VR Development"
         },
         logos:[
             {
