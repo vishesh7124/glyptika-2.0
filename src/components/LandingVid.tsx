@@ -93,7 +93,7 @@ const LandingVideo = () => {
       </div>
       <div className="absolute left-6 bottom-2" >
           <BoxReveal key={videos[currentVideo].url}  boxColor={"#5EC2B5"} duration={1}>
-            <p className=" font-text-primary text-6xl max-sm:text-3xl max-sm:p-2 bg-[#000000b3] rounded-md p-5 ">
+            <p className=" font-text-primary text-6xl max-sm:text-lg max-sm:p-2 bg-[#000000b3] rounded-md p-5 ">
               {videos[currentVideo].description}
             </p>
           </BoxReveal>
