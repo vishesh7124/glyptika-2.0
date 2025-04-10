@@ -1,64 +1,55 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "./magicui/marquee";
-import img1 from '../assets/images/forest.png'
-import img2 from '../assets/images/cycles_render.png'
-import img3 from '../assets/images/Night_2.png'
-import img4 from '../assets/images/Night_1.png'
-import img5 from '../assets/images/Doubleroom.png'
-import img6 from '../assets/images/singleroom.png'
 
 
-const reviews = [
+const baseUrl:string= "https://ik.imagekit.io/8ubfxvx6t/"
+
+
+const images = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: img1,
+    url: "Graphics/cycles_render.webp",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: img2,
+    url: "Graphics/forest.webp",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: img3
+    url: "Graphics/Render.webp",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: img4
+    url: "Graphics/envm.webp",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: img5
+    url: "Graphics/a.png",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: img6
+    url: "Graphics/Night_1.webp",
+  },
+  {
+    url: "Graphics/Night_2.webp",
+  },
+  {
+    url: "Graphics/arch.webp",
+  },
+  {
+    url: "Graphics/singleroom.webp",
+  },
+  {
+    url: "Graphics/Doubleroom.webp",
+  },
+  {
+    url: "Graphics/arch2.webp",
   },
 ];
 
-const firstRow = reviews.slice(0, 2);
-const secondRow = reviews.slice(2,4);
-const thirdRow = reviews.slice(4,6)
+const firstRow = images.slice(0, 4);
+const secondRow = images.slice(4,7);
+const thirdRow = images.slice(7,9)
 
-const ReviewCard = ({
-  img,
+const ImageCard = ({
+  url,
 
 }: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
+  url: string;
 }) => {
   return (
     <figure
@@ -71,7 +62,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-md w-full  h-full  "  alt="" src={img} />
+        <img className="rounded-md w-full  h-full  "  alt="" src={baseUrl + url} />
       </div>
     </figure>
   );
@@ -81,23 +72,23 @@ export function MarqueeDemoVertical() {
   return (
     <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden">
       <Marquee pauseOnHover vertical className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+        {firstRow.map((image) => (
+          <ImageCard key={image.url} {...image} />
         ))}
       </Marquee>
       {/* <Marquee  pauseOnHover vertical className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+        {secondRow.map((image) => (
+          <ImageCard key={image.url} {...image} />
         ))}
       </Marquee> */}
       <Marquee  pauseOnHover reverse vertical className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+        {secondRow.map((image) => (
+          <ImageCard key={image.url} {...image} />
         ))}
       </Marquee>
       <Marquee  pauseOnHover vertical className=" max-sm:hidden [--duration:20s]">
-        {thirdRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+        {thirdRow.map((image) => (
+          <ImageCard key={image.url} {...image} />
         ))}
       </Marquee>
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
