@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { LazyLoadComponent } from 'react-lazy-load-image-component'
+import { cn } from '@/lib/utils';
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Loader from './Loader';
@@ -8,11 +9,12 @@ interface LazyMediaProps {
     mediaType: 'image' | 'video';
     src: string | undefined;
     controls?: boolean;
+    className: string;
 }
 
 
 
-const LazyMedia = ({mediaType,src,controls}:LazyMediaProps) => {
+const LazyMedia = ({mediaType,src,controls,className}:LazyMediaProps) => {
     const [loading, setLoading] = useState(true)
 
         return (
@@ -24,7 +26,7 @@ const LazyMedia = ({mediaType,src,controls}:LazyMediaProps) => {
                     {mediaType==='video'? 
                     <video
                     src={src}
-                    className={`w-full h-full rounded-md object-fill  ${loading?"opacity-0 hidden ":"opacity-100"}  `}
+                    className={cn(`w-full h-full rounded-md object-fill  ${loading?"opacity-0 hidden ":"opacity-100"}  `,className)}
                     autoPlay
                     loop
                     muted
@@ -37,7 +39,7 @@ const LazyMedia = ({mediaType,src,controls}:LazyMediaProps) => {
 
                     <img
                     src={src}
-                    className={`w-full h-full rounded-md object-fill  ${loading?"opacity-0 hidden":"opacity-100"}  `}
+                    className={cn(`w-full h-full rounded-md object-fill  ${loading?"opacity-0 hidden":"opacity-100"}  `,className)}
 
                     onLoad={()=>setLoading(false)}
                     
