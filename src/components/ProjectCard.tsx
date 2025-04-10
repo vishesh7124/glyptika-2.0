@@ -24,7 +24,7 @@ export default function ProjectCard() {
         <BentoGridItem
           key={i}
           title={item.title}
-          description={<NavLink to={`/projects/${item.public_id}`}><Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Know More</Button></NavLink>}
+          description={i!==2?(<NavLink to={`/projects/${item.public_id}`}><Button className="bg-[#5EC2B5] p-4 rounded-3xl  " >Know More</Button></NavLink>) : ""}
           header={<LazyMedia mediaType={item.mediaType} src={baseUrl + item.route} />}
           className={item.className}
         />

@@ -38,7 +38,7 @@ export const projectItems: ProjectItem[] = [
   {
     id:3,
     name:"Call Of Duty",
-    title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, tempora. ",
+    title: "🎬 Glyptika in Motion. Where creativity 🧠 meets movement 🎨. At Glyptika, our animations ✨ bring ideas to life — merging bold design with fluid motion 🔄 to leave a lasting impression 💥. Dive into a world where every frame tells your story 🎥.",
     details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam excepturi odio tempora repellat voluptas voluptatem, nulla reprehenderit! Dolores, odit? Tempora maiores nulla sint possimus, aperiam perspiciatis eius mollitia quia iusto veritatis deserunt veniam assumenda commodi, maxime dolor laudantium ratione pariatur! Doloribus maxime dolorum non quaerat ullam amet totam eligendi accusamus ex cumque quasi voluptates, dolore voluptatum, commodi quod ipsum saepe. Tempore minus aliquid ipsum maxime nisi fugit cum et?",
     mediaType: "video",
     public_id:"codm_opm.webm",
