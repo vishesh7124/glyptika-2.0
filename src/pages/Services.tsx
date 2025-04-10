@@ -3,6 +3,7 @@ import videoLogo from '../assets/images/video_logo.png'
 import designLogo from '../assets/images/a.png'
 import rigImg from '../assets/images/rig.webp'
 import architectural from '../assets/images/Night_1.png'
+import envm from "../assets/images/cycles_render.webp"
 
 import { useState } from "react";
 import { NavLink } from "react-router";
@@ -32,6 +33,7 @@ type service = {
     image?: string;
 }
 
+const baseUrl:string= "https://ik.imagekit.io/8ubfxvx6t/"
 
 const serviceData: service[] = [
     {
@@ -40,22 +42,22 @@ const serviceData: service[] = [
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "video",
-            url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Samsung/Samsung.mp4",
+            url: "Animations/Samsung/Samsung.mp4",
             name: "Samsung AX"
         },
         logos:[
             {
                 name: "Blender",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png"
+                url: "Logos/blender2.png"
             },
             {
                 name: "Unreal",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/unreal.png"
+                url: "Logos/unreal.png"
             },
 
             {
                 name: "Premiere Pro",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/premiere_logo.png"
+                url: "Logos/premiere_logo.png"
             }
         ],
         image:videoLogo
@@ -66,21 +68,21 @@ const serviceData: service[] = [
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "image",
-            url: "https://ik.imagekit.io/8ubfxvx6t/Graphics/a.png?updatedAt=1744118037307",
+            url: "Graphics/a.png?updatedAt=1744118037307",
             name: "Graphic Design"
         },
         logos:[
             {
                 name: "blender",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png"
+                url: "Logos/blender2.png"
             },
             {
                 name: "ae",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/effects_logo.png"
+                url: "Logos/effects_logo.png"
             },
             {
                 name: "illustrator",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/illustrator_logo.png"
+                url: "Logos/illustrator_logo.png"
             },
         ],
         image:designLogo
@@ -92,21 +94,21 @@ const serviceData: service[] = [
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "image",
-            url: "https://ik.imagekit.io/8ubfxvx6t/Graphics/rig.webp",
+            url: "Graphics/rig.webp",
             name: "Rigged Model"
         },
         logos:[
             {
                 name: "blender",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png"
+                url: "Logos/blender2.png"
             },
             {
                 name: "Unreal",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/unreal.png"
+                url: "Logos/unreal.png"
             },
             {
                 name: "revit",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/revit.png"
+                url: "Logos/revit.png"
             },
         ],
         image:rigImg
@@ -118,20 +120,47 @@ const serviceData: service[] = [
         description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
         media: {
             mediaType: "image",
-            url: "https://ik.imagekit.io/8ubfxvx6t/Graphics/Architectural%20Rendering/Night_2.webp",
+            url: "Graphics/Architectural%20Rendering/Night_2.webp",
             name: "House Exterior"
         },
         logos:[
             {
                 name: "blender",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png"
+                url: "Logos/blender2.png"
             },
             {
                 name: "revit",
-                url: "https://ik.imagekit.io/8ubfxvx6t/Logos/revit.png"
+                url: "Logos/revit.png"
             },
         ],
         image:architectural
+
+        
+    },
+    {
+        id: 5,
+        title: "Environment Development",
+        description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
+        media: {
+            mediaType: "image",
+            url: "Graphics/cycles_render.webp",
+            name: "House Exterior"
+        },
+        logos:[
+            {
+                name: "blender",
+                url: "Logos/blender2.png"
+            },
+            {
+                name: "Unreal",
+                url: "Logos/unreal.png"
+            },
+            {
+                name: "revit",
+                url: "Logos/revit.png"
+            },
+        ],
+        image:envm
 
         
     },
@@ -140,7 +169,7 @@ const serviceData: service[] = [
 
 export default function Services() {
     const [currentService, setCurrentService] = useState<number>(0);
-    const positions = [70,50,30,60]
+    const positions = [70,50,30,60,20]
     const isMobile = window.matchMedia("(max-width: 520px)").matches
 
 
@@ -151,7 +180,7 @@ export default function Services() {
       <div className="relative max-[370px]:h-[100vh] h-[89vh] w-full max-[960px]:h-[85vh] rounded-md   max-sm:h-[100vh] max-sm:flex-col flex gap-8 justify-between items-center ">
         <div className="flex flex-col p-8 lg:pl-24 gap-8 justify-center items-start max-sm:p-4 max-sm:!m-4  bg-[#000000b3] ">
             <div className="lg:w-1/2  flex flex-col justify-center items-start gap-4 w-full ">
-                <LazyMedia mediaType={serviceData[currentService].media.mediaType} src={serviceData[currentService].media.url} controls={true}  />
+                <LazyMedia mediaType={serviceData[currentService].media.mediaType} src={baseUrl + serviceData[currentService].media.url} controls={true}  />
                 <h3 className="text-xl font-text-primary" >{serviceData[currentService].media.name}</h3>
             </div>
             <div className="flex flex-col gap-2">
@@ -166,7 +195,7 @@ export default function Services() {
             <div className="flex max-sm:flex-col max-sm:items-center max-sm:gap-4 justify-between w-full items-end">
                 <div className="flex flex-wrap gap-4">
                     {serviceData[currentService].logos.map((logo, index) => (
-                        <img key={index} src={logo.url} alt="" className="h-16 w-16 rounded-2xl object-contain " />
+                        <img key={index} src={baseUrl + logo.url} alt="" className="h-16 w-16 rounded-2xl object-contain " />
                     ))}
                 </div>
                 <Button className="bg-[#5EC2B5] p-4 rounded-3xl font-text-secondary  " ><NavLink to="/contact">Talk To Us</NavLink></Button>
