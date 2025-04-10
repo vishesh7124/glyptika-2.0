@@ -181,7 +181,7 @@ export default function Services() {
         <div className="flex flex-col p-8 lg:pl-24 gap-8 justify-center items-start max-sm:p-4 max-sm:!m-4  bg-[#000000b3] ">
             <div className="lg:w-1/2   flex flex-col justify-center items-start gap-4 w-full ">
                 
-                <LazyMedia className="max-sm:max-h-56  " mediaType={serviceData[currentService].media.mediaType} src={baseUrl + serviceData[currentService].media.url} controls={true}  />
+                <LazyMedia className="max-sm:max-h-44  " mediaType={serviceData[currentService].media.mediaType} src={baseUrl + serviceData[currentService].media.url} controls={true}  />
                 <h3 className="text-xl font-text-primary" >{serviceData[currentService].media.name}</h3>
             </div>
             <div className="flex flex-col gap-2">
