@@ -9,7 +9,7 @@ interface LazyMediaProps {
     mediaType: 'image' | 'video';
     src: string | undefined;
     controls?: boolean;
-    className: string;
+    className?: string;
 }
 
 
