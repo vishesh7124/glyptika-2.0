@@ -49,7 +49,7 @@ export const projectItems: ProjectItem[] = [
   {
     id:4,
     name:"Samsung",
-    title: "Precision. Power. Pixel-Perfect Presentation.A bold fusion of aesthetics and innovation, this section highlights Samsung’s edge-to-edge display with a dynamic, slow-pan animation that brings the 10MP front camera spec to the forefront. The background subtly complements the skin tone of the product, giving it a real-world realism, while the deep blue gradient behind the content adds immersive depth.",
+    title: "Precision. Power. Pixel-Perfect Presentation.A bold fusion of aesthetics and innovation, this section highlights Samsung’s edge-to-edge display with a dynamic, slow-pan animation that brings the 10MP front camera spec to the forefront.",
     details: "The animation was created using Blender 🧊 where bevel and subsurface modeling were applied to sculpt the Samsung device with sharp, industrial-style edges. Cycles Renderer was used for producing glassy reflections and a clean metallic finish ✨. A rotating HDRI light rig added dynamic bounce and depth to the materials, especially around the camera cut-out. In After Effects 🎞️, video masking was done to integrate the footage with animated UI highlights. The 10MP label pops out through kinetic typography animation 🔠, synced with a zoom-in motion driven by bezier keyframes for smooth cinematic focus. The overall animation follows a minimalist aesthetic 🖤, letting the sleek design of the product speak for itself while every motion and fade-in supports the premium, polished vibe of the brand.",
     mediaType: "video",
     public_id:"Samsung.mp4",
@@ -127,7 +127,7 @@ export const projectItems: ProjectItem[] = [
   {
     id:6,
     name:"BGMI",
-    title: "Hyper-Real Motion. Game-Grade Visuals. An immersive 3D sequence inspired by game-engine aesthetics, this animation leverages real-time ray-traced lighting and dynamic reflections. The glowing text and particle systems give it a high-fidelity reveal sequence — ideal for showcasing mobile gaming culture with a cinematic edge. ",
+    title: "Hyper-Real Motion. Game-Grade Visuals. An immersive 3D sequence inspired by game-engine aesthetics,",
     details: "An immersive 3D sequence inspired by game-engine aesthetics, this animation leverages real-time ray-traced lighting and dynamic reflections. The glowing text and particle systems give it a high-fidelity reveal sequence — ideal for showcasing mobile gaming culture with a cinematic edge.",
     mediaType: "video",
     public_id:"bgmi.mp4",
