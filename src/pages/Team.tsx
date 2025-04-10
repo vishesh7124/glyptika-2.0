@@ -116,7 +116,7 @@ export default function Team() {
               </TextAnimate>
 
           </div>
-          <LazyMedia className="w-full h-[89vh] object-cover z-10" mediaType={"image"} src={"https://ik.imagekit.io/8ubfxvx6t/IMAGES/DSC_0327.webp"}  >
+          <LazyMedia className=" h-[89vh] w-[95vw] max-[960px]:h-[60vh] max-sm:h-full object-cover z-10" mediaType={"image"} src={"https://ik.imagekit.io/8ubfxvx6t/IMAGES/DSC_0327.webp"}  >
 
           </LazyMedia>
           {/* <img src={"https://ik.imagekit.io/8ubfxvx6t/IMAGES/DSC_0327.webp?updatedAt=1744248430886"} className=" w-full h-full object-cover z-10  " alt="" /> */}

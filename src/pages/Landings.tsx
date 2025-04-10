@@ -5,6 +5,7 @@ import { MarqueeDemoVertical } from "@/components/AnimatedGallery";
 import { Button } from "@/components/ui/button";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { Link } from "react-router";
 
 export default function Landings() {
   return (
@@ -57,7 +58,7 @@ export default function Landings() {
           ]}
         />
         {/* <h1 className="text-4xl">Bring Ideas To Life</h1> */}
-        <Button className="bg-[#5EC2B5] p-4 rounded-3xl">Get in Touch</Button>
+        <Button className="bg-[#5EC2B5] p-4 rounded-3xl"><Link to="/contact" >Get in Touch</Link></Button>
       </div>
     </>
   );
