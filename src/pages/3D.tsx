@@ -26,37 +26,38 @@ interface model {
   thumbnail: string;
 }
 
+
 const models: model[] = [
   {
     id: 1,
     url: Gun,
     title: "GUN",
-    thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
+    thumbnail: "IMAGES/m1.png",
   },
   {
     id: 2,
     url: Boeing,
     title: "Boeing",
     thumbnail:
-      "https://res.cloudinary.com/duifdyecp/image/upload/forest_usuleo.png",
+      "IMAGES/m2.png",
   },
   {
     id: 3,
     url: Jordan,
     title: "Air Jordan",
-    thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
+    thumbnail: "IMAGES/m3.png",
   },
   {
     id: 4,
     url: Demon,
     title: "Demon",
-    thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
+    thumbnail: "IMAGES/m4.png",
   },
   {
     id: 5,
     url: Perfume,
     title: "Dior Sauvage",
-    thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
+    thumbnail: "IMAGES/m5.png",
   },
 ];
 
@@ -81,7 +82,7 @@ export default function ThreeD() {
           viewport={{once:false}}
           className="absolute top-0 left-0 z-0 font-text-primary lg:text-[18rem] text-[5rem] md:text-[11rem] text-center w-full h-full flex justify-center items-center"
         >
-          <h1>{selectedModel.title.toUpperCase()}</h1>
+          {/* <h1>{selectedModel.title.toUpperCase()}</h1> */}
         </motion.div>
       </AnimatePresence>    
       

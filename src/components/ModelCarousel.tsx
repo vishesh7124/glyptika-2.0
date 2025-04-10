@@ -22,6 +22,8 @@ interface Props{
     handleModelSelect:(i:number)=>void;
     className?:string;
 }
+const baseUrl:string = "https://ik.imagekit.io/8ubfxvx6t/"
+
 
 const ModelCarousel = ({models,handleModelSelect,className}:Props) => {
   return (
@@ -38,7 +40,7 @@ const ModelCarousel = ({models,handleModelSelect,className}:Props) => {
           <div className="p-2 hover:border-[#5EC2B5] hover:border-1 rounded-md hover:cursor-pointer ">
             <Card className="h-full w-full p-0 border-0 ">
               <CardContent className="flex w-full h-full aspect-square p-0  items-center justify-center ">
-                <img src={model.thumbnail} className="w-full h-full object-fill rounded-md " alt="" />
+                <img src={baseUrl + model.thumbnail} className="w-full h-full object-fill rounded-md " alt="" />
               </CardContent>
             </Card>
           </div>
