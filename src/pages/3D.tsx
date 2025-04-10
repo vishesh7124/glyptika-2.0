@@ -82,7 +82,7 @@ export default function ThreeD() {
           viewport={{once:false}}
           className="absolute top-0 left-0 z-0 font-text-primary lg:text-[18rem] text-[5rem] md:text-[11rem] text-center w-full h-full flex justify-center items-center"
         >
-          {/* <h1>{selectedModel.title.toUpperCase()}</h1> */}
+          <h1>{selectedModel.title.toUpperCase()}</h1>
         </motion.div>
       </AnimatePresence>    
       

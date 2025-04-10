@@ -3,19 +3,22 @@ import linkedin from "../assets/images/LinkedIn_logo_initials.png";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import LazyMedia from "./LazyMedia";
+import { Link } from "react-router";
 
 type member ={
     name: string;
     position:string;
   imageUrl: string;
   linkedIn:string;
+
 }
 
 interface profileProps {
     member: member;
+    baseUrl: string;
 }
 
-const ProfileCard = ({ member }: profileProps) => {
+const ProfileCard = ({ member, baseUrl }: profileProps) => {
   const [hovered, setHovered] = useState<boolean>(false);
 
   return (
@@ -24,7 +27,7 @@ const ProfileCard = ({ member }: profileProps) => {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <LazyMedia mediaType="image" src={member.imageUrl} loaderClass="max-w-44" className="mb-4  h-72  rounded-lg object-contain" >
+        <LazyMedia mediaType="image" src={baseUrl + member.imageUrl} loaderClass="max-w-44" className="mb-4  h-72  rounded-lg object-contain" >
 
         </LazyMedia>
         {/* <img className="mb-4  h-72  rounded-lg object-contain" src={member.imageUrl}  /> */}
@@ -52,7 +55,7 @@ const ProfileCard = ({ member }: profileProps) => {
               //       bounce: 0.1,
               //     },
               //   }}
-              className="absolute bottom-0 left-0 w-full h-24 rounded-t-[80px] p-5 flex flex-col justify-center items-center gap-2 bg-[#ffffff52] "
+              className="absolute bottom-0 left-0 w-full h-24 rounded-t-[80px] p-5 flex flex-col justify-center items-center gap-2 bg-[#2a2a2a25] "
             >
               <TextAnimate
                 className="text-xl text-center font-text-secondary ] "
@@ -71,10 +74,13 @@ const ProfileCard = ({ member }: profileProps) => {
                 {member.position}
               </TextAnimate>
               {/* <IconBrandLinkedin className='h-8 w-8 hover:cursor-pointer hover:text-[#5EC2B5]' /> */}
-              <img
-                src={linkedin}
-                className="h-5 w-5 object-contain hover:cursor-pointer hover:text-[#5EC2B5]"
-              />
+              <Link to={member.linkedIn} target="_blank" >
+                <img
+                  src={linkedin}
+                  className="h-5 w-5 object-contain hover:cursor-pointer hover:text-[#5EC2B5]"
+                />
+              
+              </Link>
             </motion.div>
           </AnimatePresence>
         )}

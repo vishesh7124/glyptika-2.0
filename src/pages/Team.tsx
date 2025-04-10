@@ -6,14 +6,45 @@ import LazyMedia from "@/components/LazyMedia";
 
 
 import ProfileCard from "@/components/ProfileCard";
+const baseUrl:string = "https://ik.imagekit.io/glyptikaweb/cdn/"
 
 const teamData = [
     {
         name: "Jai Raj Singh Ahluwalia",
         position: "CEO",
-        imageUrl:"https://ik.imagekit.io/8ubfxvx6t/IMAGES/jai_raj.jpg?updatedAt=1744249913733",
+        imageUrl:"team/jai_raj.jpg",
         linkedIn: "https://www.linkedin.com/in/jai-raj-singh-ahluwalia/"
-    }
+    },
+    {
+        name: "Pranay Mathur",
+        position: "CFO",
+        imageUrl:"team/pranay.jpg",
+        linkedIn: "https://www.linkedin.com/in/pranay-mathur-05526a28a/"
+    },
+    {
+        name: "Vanshaj Kashyap",
+        position: "CFO",
+        imageUrl:"team/vanshaj.jpg",
+        linkedIn: "https://www.linkedin.com/in/vanshaj-kashyap-38046b293/"
+    },
+    {
+        name: "Vanshaj Kaushik",
+        position: "CFO",
+        imageUrl:"team/kaushik.jpg",
+        linkedIn: "https://www.linkedin.com/in/vanshaj-kaushik-a8bb1b278/"
+    },
+    {
+        name: "Harshdeep Jakhar",
+        position: "CFO",
+        imageUrl:"team/harshdeep.jpg",
+        linkedIn: "https://www.linkedin.com/in/harshdeep-jakhar-b1736a286/"
+    },
+    {
+        name: "Maurya Kandhari",
+        position: "CFO",
+        imageUrl:"team/maurya.jpg?updatedAt=1744288980776",
+        linkedIn: "https://www.linkedin.com/in/maurya-kandhari-a4bb16313/"
+    },
 ]
 
 export default function Team() {
@@ -48,7 +79,7 @@ export default function Team() {
           </LazyMedia>
           {/* <img src={"https://ik.imagekit.io/8ubfxvx6t/IMAGES/DSC_0327.webp?updatedAt=1744248430886"} className=" w-full h-full object-cover z-10  " alt="" /> */}
         </div>
-        <div className="relative m-6 w-full font-text-primary flex flex-col items-center gap-10 justify-center">
+        <div className="relative m-6 w-full font-text-primary flex flex-col items-center gap-10 gap-x-20   justify-center">
         <TextAnimate
               className="text-4xl text-center z-20"
               animation="slideUp"
@@ -56,10 +87,10 @@ export default function Team() {
             >
              Our Leadership
             </TextAnimate>
-          <div className="flex flex-wrap p-8 gap-2 justify-center gap-y-16 items-center ">
-            {teamData.map((member, idx) => (
+          <div className="flex flex-wrap p-8 gap-2 justify-center gap-y-16 gap-x-20 items-center ">
+            {teamData.slice(0,2).map((member, idx) => (
 
-                <ProfileCard key={idx} member={member}  />
+                <ProfileCard baseUrl={baseUrl} key={idx} member={member}  />
             ))}
           </div>
           <TextAnimate
@@ -70,8 +101,8 @@ export default function Team() {
              Department Leads & Operations
             </TextAnimate>
            <div className="flex flex-wrap p-8 gap-2 justify-center gap-y-16 gap-x-20 items-center ">
-                {teamData.map((member,idx)=>(
-                <ProfileCard key={idx} member={member}  />
+                {teamData.slice(2).map((member,idx)=>(
+                <ProfileCard baseUrl={baseUrl} key={idx} member={member}  />
             ))}
           </div> 
         </div>

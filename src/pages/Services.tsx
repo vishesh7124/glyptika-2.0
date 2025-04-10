@@ -39,7 +39,7 @@ const serviceData: service[] = [
     {
         id: 1,
         title: "2D/3D Animations",
-        description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
+        description: ["Leveraging PBR workflows and Blender-native assets for hyper-realistic design output—optimized for e-commerce and advertising.", "AI-assisted concept modeling with CAD-friendly exports, reducing manual effort and design cycle time by over 40%."],
         media: {
             mediaType: "video",
             url: "Animations/Samsung/Samsung.mp4",
@@ -65,7 +65,7 @@ const serviceData: service[] = [
     {
         id: 2,
         title: "2D/3D Design",
-        description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
+        description: ["High-fidelity 3D scene design using physically accurate materials, global illumination, and HDRI lighting for cinematic impact.", "Custom geometry and LOD-ready assets built for seamless integration into games, films, and AR/VR environments."],
         media: {
             mediaType: "image",
             url: "Graphics/a.png?updatedAt=1744118037307",
@@ -91,7 +91,7 @@ const serviceData: service[] = [
     {
         id: 3,
         title: "3D Rigging",
-        description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
+        description: ["Precision control rigs designed for full animation flexibility—ideal for both game engines and cinematic production workflows.", "Animation-Ready with Zero Deformation Errors","Clean weight painting and joint hierarchies ensure smooth, glitch-free character movement right out of the box."],
         media: {
             mediaType: "image",
             url: "Graphics/rig.webp",
@@ -117,7 +117,7 @@ const serviceData: service[] = [
     {
         id: 4,
         title: "Architectural Rendering",
-        description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
+        description: ["Harnessing Unreal Engine and Blender Cycles for dynamic illumination, shadow precision, and environment reflection accuracy.", "Every structure adheres to scale-perfect CAD blueprints—ensuring visualization that transitions seamlessly to real-world construction."],
         media: {
             mediaType: "image",
             url: "Graphics/Architectural%20Rendering/Night_2.webp",
@@ -140,7 +140,7 @@ const serviceData: service[] = [
     {
         id: 5,
         title: "Environment Development",
-        description: ["Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt", "voluptatibus accusamus nobis alias fugit cum consectetur ullam perspiciatis."],
+        description: ["Crafted with powerful tools like Blender, Unreal Engine, and World Machine to simulate lifelike landscapes and ecosystems.", "Optimized for animation, games, and VR—bringing natural elements like wind, shadows, and growth to life in real-time environments."],
         media: {
             mediaType: "image",
             url: "Graphics/cycles_render.webp",
