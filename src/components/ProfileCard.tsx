@@ -1,8 +1,8 @@
 import { TextAnimate } from "@/components/magicui/text-animate";
 import linkedin from "../assets/images/LinkedIn_logo_initials.png";
-import { BlurFade } from "@/components/magicui/blur-fade";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
+import LazyMedia from "./LazyMedia";
 
 type member ={
     name: string;
@@ -13,20 +13,21 @@ type member ={
 
 interface profileProps {
     member: member;
-  idx: number;
 }
 
-const ProfileCard = ({ member, idx }: profileProps) => {
+const ProfileCard = ({ member }: profileProps) => {
   const [hovered, setHovered] = useState<boolean>(false);
 
   return (
-    <BlurFade key={member.imageUrl} delay={0.25 + idx * 0.05} inView>
       <div
         className=" relative hover:cursor-pointer "
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <img className="mb-4  h-72  rounded-lg object-contain" src={member.imageUrl} />
+        <LazyMedia mediaType="image" src={member.imageUrl} loaderClass="max-w-44" className="mb-4  h-72  rounded-lg object-contain" >
+
+        </LazyMedia>
+        {/* <img className="mb-4  h-72  rounded-lg object-contain" src={member.imageUrl}  /> */}
         {hovered  && (
           <AnimatePresence>
             <motion.div
@@ -78,7 +79,7 @@ const ProfileCard = ({ member, idx }: profileProps) => {
           </AnimatePresence>
         )}
       </div>
-    </BlurFade>
+
   );
 };
 
