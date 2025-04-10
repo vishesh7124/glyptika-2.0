@@ -43,19 +43,32 @@ export default function Team() {
             </TextAnimate>
 
           </div>
-          <LazyMedia className="w-full h-full object-cover z-10" mediaType={"image"} src={"https://ik.imagekit.io/8ubfxvx6t/IMAGES/DSC_0327.webp"}  >
+          <LazyMedia className="w-full h-[89vh] object-cover z-10" mediaType={"image"} src={"https://ik.imagekit.io/8ubfxvx6t/IMAGES/DSC_0327.webp"}  >
 
           </LazyMedia>
           {/* <img src={"https://ik.imagekit.io/8ubfxvx6t/IMAGES/DSC_0327.webp?updatedAt=1744248430886"} className=" w-full h-full object-cover z-10  " alt="" /> */}
         </div>
         <div className="relative m-6 w-full font-text-primary flex flex-col items-center gap-10 justify-center">
-
+        <TextAnimate
+              className="text-4xl text-center z-20"
+              animation="slideUp"
+              by="word"
+            >
+             Our Leadership
+            </TextAnimate>
           <div className="flex flex-wrap p-8 gap-2 justify-center gap-y-16 items-center ">
             {teamData.map((member, idx) => (
 
                 <ProfileCard key={idx} member={member}  />
             ))}
           </div>
+          <TextAnimate
+              className="text-4xl text-center z-20"
+              animation="slideUp"
+              by="word"
+            >
+             Department Leads & Operations
+            </TextAnimate>
            <div className="flex flex-wrap p-8 gap-2 justify-center gap-y-16 gap-x-20 items-center ">
                 {teamData.map((member,idx)=>(
                 <ProfileCard key={idx} member={member}  />
