@@ -1,4 +1,4 @@
-import loading_vid from '../assets/loading_vid.mp4'
+import loading_vid from '../assets/loading.mp4'
 import { cn } from '@/lib/utils'
 
 const Loader = ({className}:{className?:string}) => {
