@@ -28,7 +28,7 @@ const LazyMedia = ({mediaType,src,controls,className,loaderClass}:LazyMediaProps
                     {mediaType==='video'? 
                     <video
                     src={src}
-                    className={cn(`w-full h-full rounded-md object-fill  ${loading?"opacity-0 hidden ":"opacity-100"}  `,className)}
+                    className={cn(`w-full h-full rounded-md object-contain bg-black  ${loading?"opacity-0 hidden ":"opacity-100"}  `,className)}
                     autoPlay
                     loop
                     muted

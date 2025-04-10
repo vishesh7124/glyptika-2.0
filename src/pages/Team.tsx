@@ -2,8 +2,7 @@
 
 import { TextAnimate } from "@/components/magicui/text-animate";
 import LazyMedia from "@/components/LazyMedia";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router";
+
 
 
 
@@ -148,9 +147,6 @@ export default function Team() {
             ))}
           </div> 
         </div>
-          <div className={`fixed bottom-10 right-7 z-20 `}>
-            <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " ><Link to="https://docs.google.com/forms/d/1obUz0QFdiewjhNvsdQd9NvdFcTKiHwtjpcbl0s34XSI/edit?ts=67f7db64" target="_blank"  >Join Now</Link></Button>
-          </div>
 
       </div>
     </>

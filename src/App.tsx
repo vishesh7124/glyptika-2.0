@@ -3,6 +3,12 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 import { Routes, Route } from "react-router"
+import { Button } from "./components/ui/button"
+import { Link } from "react-router"
+import { useState } from "react"
+import { useScroll, useMotionValueEvent } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
+import {motion} from "motion/react"
 // import { motion } from "framer-motion"
 
 import { AuroraBackground } from "./components/aurora-background"
@@ -21,7 +27,13 @@ import Contact from "./pages/Contact"
 
 
 function App() {
+  const {scrollYProgress} = useScroll()
+  const [scrollPosition, setScrollPosition] = useState(0)
 
+  // Update state when scroll changes
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    setScrollPosition(latest)
+  })
 
   return (
     <div className="h-full w-full">
@@ -40,6 +52,13 @@ function App() {
           <Route path="/team" element={<Team/>} />
           <Route path="/contact" element={<Contact/>} />
         </Routes>
+        {scrollPosition >= 0.1 && scrollPosition <= 0.8 && (<AnimatePresence>
+
+          <motion.div initial={{x:20}} animate={{x:0, transition: {type:"spring", duration: 1, bounce:0.1 }}} exit={{x:0,transition: {type:"spring", duration: 0.5, bounce:0.1 }}} className={`fixed bottom-10 right-7 z-20 `}>
+              <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " ><Link to="https://docs.google.com/forms/d/1obUz0QFdiewjhNvsdQd9NvdFcTKiHwtjpcbl0s34XSI/edit?ts=67f7db64" target="_blank"  >Join Us</Link></Button>
+          </motion.div>
+        
+        </AnimatePresence>)}
         <Footer/>
         <Toaster />
 
