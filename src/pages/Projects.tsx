@@ -13,7 +13,7 @@ export default function Projects() {
             animation="slideUp"
             by="word"
           >
-            Glimpse Into Our Creative World
+            🎬 Animating Ideas with Glyptika
           </TextAnimate>
           <TextAnimate
             className="text-center font-text-tertiary "
@@ -23,7 +23,7 @@ export default function Projects() {
             duration={2}
           >
             {
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque incidunt, voluptatibus accusamus nobis alias fugit cum consecteturullam perspiciatis."
+              "At Glyptika, we transform static models into captivating stories. Our animations fuse precision with imagination—bringing your products, concepts, and visions to life with smooth motion and stunning detail. Whether it’s for a product reveal or a digital campaign, we make every frame count."
             }
           </TextAnimate>
         </div>

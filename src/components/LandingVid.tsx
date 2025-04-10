@@ -18,19 +18,19 @@ const videos: Video[] = [
     id: 1,
     url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Alpha/AlphaTreadShoes.mp4",
     title: "Video 1",
-    description: "Blur in by character"
+    description: "Creative Excellence"
   },
   {
     id: 2,
     url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Samsung/Samsung.mp4",
     title: "Video 1",
-    description: " by character"
+    description: "Scalable 3D Solutions"
   },
   {
     id: 3,
     url: "https://ik.imagekit.io/8ubfxvx6t/Animations/Experiential/bgmi/bgmi.mp4",
     title: "Video 1",
-    description: "character"
+    description: " Fast, Flexible, Future-Ready"
   },
 
 ];

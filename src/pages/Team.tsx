@@ -2,6 +2,8 @@
 
 import { TextAnimate } from "@/components/magicui/text-animate";
 import LazyMedia from "@/components/LazyMedia";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
 
 
 
@@ -22,32 +24,63 @@ const teamData = [
         linkedIn: "https://www.linkedin.com/in/pranay-mathur-05526a28a/"
     },
     {
+        name: "Diya Wadhawan",
+        position: "Legal and Operations Manager",
+        imageUrl:"team/diya.webp",
+        linkedIn: "https://www.linkedin.com/in/diya-wadhawan-548941280/"
+    },
+    {
         name: "Vanshaj Kashyap",
-        position: "CFO",
+        position: "HR Manager",
         imageUrl:"team/vanshaj.jpg",
         linkedIn: "https://www.linkedin.com/in/vanshaj-kashyap-38046b293/"
     },
     {
         name: "Vanshaj Kaushik",
-        position: "CFO",
+        position: "Project Team Lead (XPLOR) & Frontend Developer",
         imageUrl:"team/kaushik.jpg",
         linkedIn: "https://www.linkedin.com/in/vanshaj-kaushik-a8bb1b278/"
     },
     {
         name: "Harshdeep Jakhar",
-        position: "CFO",
+        position: "CTO (AI Developer)",
         imageUrl:"team/harshdeep.jpg",
         linkedIn: "https://www.linkedin.com/in/harshdeep-jakhar-b1736a286/"
     },
     {
         name: "Maurya Kandhari",
-        position: "CFO",
+        position: "Head of Content, Publicity, and Outreach",
         imageUrl:"team/maurya.jpg?updatedAt=1744288980776",
         linkedIn: "https://www.linkedin.com/in/maurya-kandhari-a4bb16313/"
+    },
+    {
+        name: "Awanti Prakash",
+        position: "Head of 2D Animation & Creativity",
+        imageUrl:"team/awanti.jpg",
+        linkedIn: "https://www.linkedin.com/in/awanti-prakash/"
+    },
+    {
+        name: "Piyush Malik",
+        position: "Head of Video Editing and Post-Production",
+        imageUrl:"team/piyush2.jpg",
+        linkedIn: "https://www.linkedin.com/in/p1yushmalik/"
+    },
+    {
+        name: "Ashwin Garg",
+        position: "Head of 3D Animation and Modelling",
+        imageUrl:"team/ashwin.webp",
+        linkedIn: "https://www.linkedin.com/in/ashwin-garg-251781317/"
+    },
+    {
+        name: "Aryan Khurana",
+        position: "Head of Graphic Design",
+        imageUrl:"team/aryan.webp",
+        linkedIn: "https://www.linkedin.com/in/ashwin-garg-251781317/"
     },
 ]
 
 export default function Team() {
+// inside component:
 
 
   return (
@@ -70,8 +103,17 @@ export default function Team() {
               as="p"
               duration={2}
             >
-              {`Get to know the brilliant individuals whose dedication and creativity power our vision forward.`}
+              {`With a powerhouse of 10+ creative designers and 20+ skilled 3D modeling experts, our team brings unmatched talent and innovation to every project.`}
             </TextAnimate>
+            <TextAnimate
+              className="text-center font-text-tertiary max-sm:hidden z-20 "
+              animation="fadeIn"
+              by="line"
+              as="p"
+              duration={2}
+            >
+              {` At Glyptika, excellence isn't an exception — it's the standard.`}
+              </TextAnimate>
 
           </div>
           <LazyMedia className="w-full h-[89vh] object-cover z-10" mediaType={"image"} src={"https://ik.imagekit.io/8ubfxvx6t/IMAGES/DSC_0327.webp"}  >
@@ -106,6 +148,10 @@ export default function Team() {
             ))}
           </div> 
         </div>
+          <div className={`fixed bottom-10 right-7 z-20 `}>
+            <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " ><Link to="https://docs.google.com/forms/d/1obUz0QFdiewjhNvsdQd9NvdFcTKiHwtjpcbl0s34XSI/edit?ts=67f7db64" target="_blank"  >Join Now</Link></Button>
+          </div>
+
       </div>
     </>
   );

@@ -22,8 +22,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-right font-text-tertiary text-[#5EC2B5] flex flex-col items-center justify-center gap-5 max-sm:flex-row max-sm:text-xs max-sm:flex-wrap max-sm:justify-start max-sm:gap-2">
-                <p>teamglyptika@gmail.com</p>
-                <p>98XXXXX1213</p>
+                <p>marketing@glyptika.com</p>
+                <p>7681909874</p>
                 <p>Venture Lab, TIET Patiala</p>
             </div>
         </div>

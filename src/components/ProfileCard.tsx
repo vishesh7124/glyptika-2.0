@@ -55,7 +55,7 @@ const ProfileCard = ({ member, baseUrl }: profileProps) => {
               //       bounce: 0.1,
               //     },
               //   }}
-              className="absolute bottom-0 left-0 w-full h-24 rounded-t-[80px] p-5 flex flex-col justify-center items-center gap-2 bg-[#2a2a2a25] "
+              className="absolute bottom-0 left-0 w-full h-24 rounded-t-[80px] p-5 flex flex-col justify-center items-center gap-2 bg-[#2a2a2ad4] "
             >
               <TextAnimate
                 className="text-xl text-center font-text-secondary ] "
