@@ -10,10 +10,14 @@ import {motion, AnimatePresence} from "motion/react"
 import ModelCarousel from "@/components/ModelCarousel";
 
 
-import { Ship } from "../components/models/Ship";
-import { Model } from "../components/models/Iphone_12_pro";
-import { Car } from "../components/models/Car";
-import {Mercedes} from "../components/models/Bmw"
+// import {Mercedes} from "../components/models/Mercedes"
+
+import { Perfume } from "@/components/models/Sauvage_perfume";
+import {Gun} from "@/components/models/Gun"
+
+import {Boeing} from "@/components/models/Boeing"
+import { Demon } from "@/components/models/Demon";
+import { Jordan } from "@/components/models/Jordan";
 
 interface model {
   id: number;
@@ -25,33 +29,33 @@ interface model {
 const models: model[] = [
   {
     id: 1,
-    url: Model,
-    title: "I phone",
+    url: Gun,
+    title: "GUN",
     thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
   },
   {
     id: 2,
-    url: Car,
-    title: "Car",
+    url: Boeing,
+    title: "Boeing",
     thumbnail:
       "https://res.cloudinary.com/duifdyecp/image/upload/forest_usuleo.png",
   },
   {
     id: 3,
-    url: Mercedes,
-    title: "Mercedes",
+    url: Jordan,
+    title: "Air Jordan",
     thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
   },
   {
     id: 4,
-    url: Ship,
-    title: "Ship",
+    url: Demon,
+    title: "Demon",
     thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
   },
   {
     id: 5,
-    url: Car,
-    title: "Car 2",
+    url: Perfume,
+    title: "Dior Sauvage",
     thumbnail: "https://res.cloudinary.com/duifdyecp/image/upload/a_jvvqci.png",
   },
 ];
