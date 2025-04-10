@@ -10,6 +10,7 @@ export default function Landings() {
   return (
     // <CompareDemo/>
     <>
+
       <LandingVideo />
       <div className="relative m-6 w-full font-text-primary flex flex-col items-center gap-10 justify-center">
         <div className="flex flex-col p-8 gap-2 justify-center items-center ">

@@ -4,6 +4,8 @@ import { IconMenu } from "@tabler/icons-react"
 import { useEffect, useState } from "react"
 import {X} from 'lucide-react'
 import { NavLink, useLocation } from "react-router"
+import { toast } from "sonner"
+
 
 const Navbar = () => {
 
@@ -13,6 +15,12 @@ const Navbar = () => {
   useEffect(() => {
     setMenuOpen(false)
     window.scrollTo(0, 0);
+    if( ["/projects","/3d"].includes(location.pathname) ){
+
+      toast("Disclaimer", {
+        description: "All content displayed on this website is for demonstration purposes only. We are not affiliated with, endorsed by, or partnered with any of the brands or entities shown.",
+      })
+    }
   }, [location])
   
 

@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router"
 import { AuroraBackground } from "./components/aurora-background"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import { Toaster } from "./components/ui/sonner"
 
 import Landings from "./pages/Landings"
 import Projects from "./pages/Projects"
@@ -40,6 +41,8 @@ function App() {
           <Route path="/contact" element={<Contact/>} />
         </Routes>
         <Footer/>
+        <Toaster />
+
       </AuroraBackground   >
       
       {/* <div className="h-full w-full z-10">
