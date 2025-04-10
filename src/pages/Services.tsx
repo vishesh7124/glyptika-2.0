@@ -179,7 +179,7 @@ export default function Services() {
     <>
       <div className="relative max-[370px]:h-[100vh] h-[89vh] w-full max-[960px]:h-[85vh] rounded-md   max-sm:h-[100vh] max-sm:flex-col flex gap-8 justify-between items-center ">
         <div className="flex flex-col p-8 lg:pl-24 gap-8 justify-center items-start max-sm:p-4 max-sm:!m-4  bg-[#000000b3] ">
-            <div className="lg:w-1/2  flex flex-col justify-center items-start gap-4 w-full ">
+            <div className="lg:w-1/2 max-sm:max-h-[35%]   flex flex-col justify-center items-start gap-4 w-full ">
                 <LazyMedia mediaType={serviceData[currentService].media.mediaType} src={baseUrl + serviceData[currentService].media.url} controls={true}  />
                 <h3 className="text-xl font-text-primary" >{serviceData[currentService].media.name}</h3>
             </div>
@@ -206,11 +206,11 @@ export default function Services() {
         <div className="banners flex flex-col max-sm:flex-row justify-center items-center gap-6 max-sm:gap-2">
             {serviceData.map((service, index) => (
                 <motion.div initial={{x:!isMobile? 400:0}} whileInView={{x:currentService===index?0:!isMobile?positions[index]:0, transition:{delay:0.5,duration:1.5,type:"spring",bounce:0.5}}} viewport={{once:true}}  whileHover={{x:0}} key={index} onClick={()=>setCurrentService(index)}
-                 className={` banner hover:cursor-pointer hover:bg-[#000000b3]  h-24 lg:w-[25rem] max-[960px]:w-[18rem] rounded-2xl rounded-r-none flex px-4 justify-start items-center gap-6 max-sm:flex-col max-sm:h-48 max-sm:w-20 max-sm:p-8 max-sm:gap-2     max-sm:rounded-r-2xl
+                 className={` banner hover:cursor-pointer hover:bg-[#000000b3]  h-24 lg:w-[25rem] max-[960px]:w-[18rem] rounded-2xl rounded-r-none flex px-4 justify-start items-center gap-6 max-sm:flex-col max-sm:h-48 max-sm:w-20 max-sm:p-2 max-sm:gap-2     max-sm:rounded-r-2xl
                     ${currentService === index ? "bg-[#000000b3]" : "bg-[#5EC2B5]"}`}
                  >
-                    <img src={service.image} className="aspect-square object-contain w-8 h-8" alt="" />
-                    <h1  className="text-xl font-text-primary max-sm:text-center max-sm:text-[0.8rem] ">{service.title}</h1>
+                    <img src={service.image} className="aspect-square object-contain max-sm:object-cover w-8 h-8 max-sm:h-8 max-sm:w-8  " alt="" />
+                    <h1  className="text-xl font-text-primary max-sm:text-center max-sm:text-[0.8rem] max-sm:rotate-270 max-sm:p-7 ">{service.title}</h1>
                 </motion.div>
             ))}
         </div>
