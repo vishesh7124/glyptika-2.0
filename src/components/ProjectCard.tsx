@@ -15,7 +15,7 @@ export default function ProjectCard() {
   //   item.className = `lg:${gridPattern[i%gridPattern.length]}`;
   // })
 
-  const baseUrl:String="https://ik.imagekit.io/8ubfxvx6t/Animations/"
+  const baseUrl:String="https://ik.imagekit.io/glyptikaweb/cdn/Animations/"
 
 
   return (

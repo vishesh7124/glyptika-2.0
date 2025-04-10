@@ -22,7 +22,7 @@ interface Props{
     handleModelSelect:(i:number)=>void;
     className?:string;
 }
-const baseUrl:string = "https://ik.imagekit.io/8ubfxvx6t/"
+const baseUrl:string = "https://ik.imagekit.io/glyptikaweb/cdn/"
 
 
 const ModelCarousel = ({models,handleModelSelect,className}:Props) => {

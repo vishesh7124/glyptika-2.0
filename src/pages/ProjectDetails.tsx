@@ -15,7 +15,7 @@ export default function ProjectDetails() {
     (item) => item.public_id === encodeURIComponent(params.pid ?? "")
   );
 
-  const baseUrl: String = "https://ik.imagekit.io/8ubfxvx6t/Animations/";
+  const baseUrl: String = "https://ik.imagekit.io/glyptikaweb/cdn/Animations/";
 
   return (
     <>

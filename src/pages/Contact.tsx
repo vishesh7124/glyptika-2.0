@@ -10,15 +10,15 @@ type logo = {
 const logos: logo[] = [
   {
     name: "Blender",
-    url: "https://ik.imagekit.io/8ubfxvx6t/Logos/blender2.png",
+    url: "https://ik.imagekit.io/glyptikaweb/cdn/Logos/blender2.png",
   },
   {
     name: "Unreal",
-    url: "https://ik.imagekit.io/8ubfxvx6t/Logos/unreal.png",
+    url: "https://ik.imagekit.io/glyptikaweb/cdn/Logos/unreal.png",
   },
   {
     name: "Revit",
-    url: "https://ik.imagekit.io/8ubfxvx6t/Logos/revit.png",
+    url: "https://ik.imagekit.io/glyptikaweb/cdn/Logos/revit.png",
   },
 ];
 

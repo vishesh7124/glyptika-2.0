@@ -33,7 +33,7 @@ type service = {
     image?: string;
 }
 
-const baseUrl:string= "https://ik.imagekit.io/8ubfxvx6t/"
+const baseUrl:string= "https://ik.imagekit.io/glyptikaweb/cdn/"
 
 const serviceData: service[] = [
     {
