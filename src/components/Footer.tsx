@@ -18,6 +18,7 @@ const Footer = () => {
                     <Link to="/projects" className='hover:text-[#5EC2B5]' >Animations</Link>
                     <Link to="/3d" className='hover:text-[#5EC2B5]' >3D Models</Link>
                     <Link to="/services" className='hover:text-[#5EC2B5]' >Services</Link>
+                    <Link to="/team" className='hover:text-[#5EC2B5]' >Team</Link>
                     <Link to="/contact" className='hover:text-[#5EC2B5]' >Contact Us</Link>
                 </div>
             </div>

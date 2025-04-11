@@ -74,7 +74,7 @@ const teamData = [
         name: "Aryan Khurana",
         position: "Head of Graphic Design",
         imageUrl:"team/aryan.webp",
-        linkedIn: "https://www.linkedin.com/in/ashwin-garg-251781317/"
+        linkedIn: "https://www.linkedin.com/in/aryan-khurana-0-/"
     },
 ]
 
