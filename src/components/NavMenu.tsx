@@ -15,14 +15,14 @@ type NavMenuItems = {
 const navMenuItems:NavMenuItems[] =[
     {
         "route":"/projects",
-        "img":"https://ik.imagekit.io/8ubfxvx6t/Graphics/nav-image1.webp?updatedAt=1744269331660",
+        "img":"https://ik.imagekit.io/glyptikaweb/cdn/Graphics/nav-image1.webp?updatedAt=1744269331660",
         "title":"Animations",
         "description":"Dive into dynamic visuals and storytelling brought to life through stunning animations."
 
     },
     {
         "route":"/3d",
-        "img":"https://ik.imagekit.io/8ubfxvx6t/Graphics/nav-image2.webp?updatedAt=1744269333298",
+        "img":"https://ik.imagekit.io/glyptikaweb/cdn/Graphics/nav-image2.webp?updatedAt=1744269333298",
         "title":"3D Models",
         "description":"Explore lifelike 3D creations, from sleek designs to detailed environments, crafted to perfection."
     }
