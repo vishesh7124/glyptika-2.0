@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { Marquee } from "./magicui/marquee";
 
 
-const baseUrl:string= "https://ik.imagekit.io/8ubfxvx6t/"
+const baseUrl:string= "https://ik.imagekit.io/glyptikaweb/cdn/"
 
 
 const images = [
