@@ -1,7 +1,4 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
+
 import { Routes, Route } from "react-router"
 import { Button } from "./components/ui/button"
 import { Link } from "react-router"
@@ -9,8 +6,6 @@ import { useState } from "react"
 import { useScroll, useMotionValueEvent } from "framer-motion"
 import { AnimatePresence } from "framer-motion"
 import {motion} from "motion/react"
-// import { motion } from "framer-motion"
-
 import { AuroraBackground } from "./components/aurora-background"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
@@ -64,9 +59,7 @@ function App() {
 
       </AuroraBackground   >
       
-      {/* <div className="h-full w-full z-10">
 
-      </div> */}
     </div>
 
   
