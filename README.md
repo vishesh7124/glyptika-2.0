@@ -31,7 +31,7 @@ Welcome to the official repository for [Glyptika Studios](https://glyptika.com) 
 - Behind-the-render slider (preview images from Blender).
 - Infinite animation preview slider and image gallery.
 
-#### ROJECT_ITEM Data Structure
+#### PROJECT_ITEM Data Structure
 
 Each project item is defined by the [ProjectItem](vscode-file://vscode-app/c:/Users/vishe/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html) type and contains details about a project's animation. Below is a description of each property:
 
@@ -67,6 +67,7 @@ Each project item is defined by the [ProjectItem](vscode-file://vscode-app/c:/U
 
 #### Example ProjectItem
 
+```json
 {
 
     id: 1,
@@ -86,6 +87,7 @@ Each project item is defined by the [ProjectItem](vscode-file://vscode-app/c:/U
     className: "md:col-span-2"
 
 }
+```
 
 This structure enables the application to dynamically generate project cards, detail pages, galleries, and other UI elements based on the project data. Each property is used to organize and present the project information consistently across the site.
 
