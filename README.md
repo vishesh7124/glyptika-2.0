@@ -31,6 +31,68 @@ Welcome to the official repository for [Glyptika Studios](https://glyptika.com) 
 - Behind-the-render slider (preview images from Blender).
 - Infinite animation preview slider and image gallery.
 
+#### ROJECT_ITEM Data Structure
+
+Each project item is defined by the [ProjectItem](vscode-file://vscode-app/c:/Users/vishe/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html) type and contains details about a project's animation. Below is a description of each property:
+
+-   **id** (number)\
+    A unique numeric identifier for the project.
+
+-   **name** (string)\
+    The name of the project.
+
+-   **title** (string)\
+    A brief title or description for the project, usually used as a headline on the UI.
+
+-   **details** (optional string)\
+    Additional descriptive text that provides more context about the project. It can contain multiple sentences or paragraphs.
+
+-   **mediaType** ("image" | "video")\
+    Indicates the type of media associated with the project. The accepted values are `"image"` or `"video"`.
+
+-   **public_id** (optional string)\
+    A unique string used as the filename identifier. This property should be unique for each project and is used to build URLs or perform look-ups.
+
+-   **route** (string)\
+    A route or relative path to the media resource. This path is appended to a base URL when loading the media.
+
+-   **galleryItems** (optional string array)\
+    An array of strings representing paths to additional gallery images for the project. These images are used to create an image grid or gallery view.
+
+-   **renderItems** (optional string array)\
+    An array of strings representing paths to rendered images. These images are used to display behind animations or as alternative views.
+
+-   **className** (optional string)\
+    A string representing additional CSS classes. This is typically used to adjust layout-specific styling (e.g., grid spans).
+
+#### Example ProjectItem
+
+{
+
+    id: 1,
+
+    name: "Alpha Tread",
+
+    title: "Bold Design, Built to Impress. From textures to treads, our 3D models are engineered for realism and aesthetic impact. Perfect for prototypes, product demos, or your next big idea.",
+
+    details: "This animation blends 2D motion dynamics with procedural movement design using Adobe After Effects, Spline 3D, and Lottie for web optimization. Smooth path-following, dynamic obstacles, and layered object interactions bring the concept of real-time surface adaptation to life.",
+
+    mediaType: "video",
+
+    public_id: "AlphaTreadShoes.mp4",
+
+    route: "Alpha/AlphaTreadShoes.mp4",
+
+    className: "md:col-span-2"
+
+}
+
+This structure enables the application to dynamically generate project cards, detail pages, galleries, and other UI elements based on the project data. Each property is used to organize and present the project information consistently across the site.
+
+* * * * *
+
+
+
 ### 🔹 Services Page
 - Piano-key-style service selector (responsive for mobile).
 - Detailed service view with animation/image, highlights, and software stack.
