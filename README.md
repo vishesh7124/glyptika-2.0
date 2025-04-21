@@ -67,7 +67,7 @@ Each project item is defined by the [ProjectItem](vscode-file://vscode-app/c:/U
 
 #### Example ProjectItem
 
-```json
+``` jsx
 {
 
     id: 1,
