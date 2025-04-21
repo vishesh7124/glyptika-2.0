@@ -93,6 +93,17 @@ This structure enables the application to dynamically generate project cards, de
 
 * * * * *
 
+#### BASE URL
+
+The application defines a constant called `baseUrl` which is used to build the complete URL for the media associated with each project. Here are some key details:
+
+``` jsx
+const baseUrl: string = "https://ik.imagekit.io/glyptikaweb/cdn/Animations/"
+```
+
+Using the above structure, the complete URL for the media would be built by concatenating `baseUrl` and `route`, resulting in:\
+`https://ik.imagekit.io/glyptikaweb/cdn/Animations/Alpha/AlphaTreadShoes.mp4`
+
 
 
 ### 🔹 Services Page
