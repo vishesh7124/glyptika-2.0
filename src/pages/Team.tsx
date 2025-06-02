@@ -113,7 +113,7 @@ export default function Team() {
               animation="slideUp"
               by="word"
             >
-             Department Leads & Operations
+             Department Leads
             </TextAnimate>
            <div className="flex flex-wrap p-8 gap-2 justify-center gap-y-16 gap-x-20 items-center ">
                 {teamData.slice(2).map((member,idx)=>(
