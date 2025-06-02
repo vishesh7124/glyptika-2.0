@@ -50,7 +50,7 @@ const teamData = [
         name: "Vayan",
         position: "Head of Content, Publicity, and Outreach",
         imageUrl:"team/vayan.jpg",
-        linkedIn: "https://www.linkedin.com/in/maurya-kandhari-a4bb16313/"
+        linkedIn: "https://www.linkedin.com/in/vayanmalik/"
     },
     {
         name: "Awanti Prakash",
