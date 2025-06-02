@@ -12,13 +12,13 @@ const baseUrl:string = "https://ik.imagekit.io/glyptikaweb/cdn/"
 const teamData = [
     {
         name: "Jai Raj Singh Ahluwalia",
-        position: "CEO",
+        position: "Founder",
         imageUrl:"team/jai_raj.jpg",
         linkedIn: "https://www.linkedin.com/in/jai-raj-singh-ahluwalia/"
     },
     {
         name: "Pranay Mathur",
-        position: "CFO",
+        position: "Co-Founder",
         imageUrl:"team/pranay.jpg",
         linkedIn: "https://www.linkedin.com/in/pranay-mathur-05526a28a/"
     },
@@ -47,9 +47,9 @@ const teamData = [
         linkedIn: "https://www.linkedin.com/in/harshdeep-jakhar-b1736a286/"
     },
     {
-        name: "Maurya Kandhari",
+        name: "Vayan",
         position: "Head of Content, Publicity, and Outreach",
-        imageUrl:"team/maurya.jpg?updatedAt=1744288980776",
+        imageUrl:"team/vayan.jpg",
         linkedIn: "https://www.linkedin.com/in/maurya-kandhari-a4bb16313/"
     },
     {
@@ -58,18 +58,7 @@ const teamData = [
         imageUrl:"team/awanti.jpg",
         linkedIn: "https://www.linkedin.com/in/awanti-prakash/"
     },
-    {
-        name: "Piyush Malik",
-        position: "Head of Video Editing and Post-Production",
-        imageUrl:"team/piyush2.jpg",
-        linkedIn: "https://www.linkedin.com/in/p1yushmalik/"
-    },
-    {
-        name: "Ashwin Garg",
-        position: "Head of 3D Animation and Modelling",
-        imageUrl:"team/ashwin.webp",
-        linkedIn: "https://www.linkedin.com/in/ashwin-garg-251781317/"
-    },
+
     {
         name: "Aryan Khurana",
         position: "Head of Graphic Design",
