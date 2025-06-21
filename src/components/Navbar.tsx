@@ -34,6 +34,7 @@ const Navbar = () => {
                 <NavMenu/>
                 <NavLink to="/services" className="hover:text-[#5EC2B5]">SERVICES</NavLink>
                 <NavLink to="/team" className="hover:text-[#5EC2B5]">TEAM</NavLink>
+                <NavLink to="/explor" className="hover:text-[#5EC2B5]">EXPLOR</NavLink>
             </div>
             <Button className="bg-[#5EC2B5] p-4 rounded-3xl max-sm:hidden " ><NavLink to="/contact">Contact Us</NavLink></Button>
             <div className="hamburger-menu sm:hidden" onClick={()=>setMenuOpen(!menuOpen)} >
@@ -57,6 +58,7 @@ const Navbar = () => {
                 <NavMenu />
                 <NavLink to="/services" className="hover:text-[#5EC2B5]"  >SERVICES</NavLink>
                 <NavLink to="/team" className="hover:text-[#5EC2B5]">TEAM</NavLink>
+                <NavLink to="/team" className="hover:text-[#5EC2B5]">EXPLOR</NavLink>
 
             </div>
             <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " ><NavLink to="/contact">Contact Us</NavLink></Button>

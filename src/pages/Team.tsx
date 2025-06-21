@@ -3,79 +3,50 @@
 import { TextAnimate } from "@/components/magicui/text-animate";
 import LazyMedia from "@/components/LazyMedia";
 
-
-
-
 import ProfileCard from "@/components/ProfileCard";
 const baseUrl:string = "https://ik.imagekit.io/glyptikaweb/cdn/"
 
 const teamData = [
     {
         name: "Jai Raj Singh Ahluwalia",
-        position: "CEO",
+        position: "Founder",
         imageUrl:"team/jai_raj.jpg",
         linkedIn: "https://www.linkedin.com/in/jai-raj-singh-ahluwalia/"
     },
     {
         name: "Pranay Mathur",
-        position: "CFO",
+        position: "Co-Founder",
         imageUrl:"team/pranay.jpg",
         linkedIn: "https://www.linkedin.com/in/pranay-mathur-05526a28a/"
     },
-    {
-        name: "Diya Wadhawan",
-        position: "Legal and Operations Manager",
-        imageUrl:"team/diya.webp",
-        linkedIn: "https://www.linkedin.com/in/diya-wadhawan-548941280/"
-    },
+
     {
         name: "Vanshaj Kashyap",
-        position: "HR Manager",
+        position: "Team Member",
         imageUrl:"team/vanshaj.jpg",
         linkedIn: "https://www.linkedin.com/in/vanshaj-kashyap-38046b293/"
     },
-    {
-        name: "Vanshaj Kaushik",
-        position: "Project Team Lead (XPLOR) & Frontend Developer",
-        imageUrl:"team/kaushik.jpg",
-        linkedIn: "https://www.linkedin.com/in/vanshaj-kaushik-a8bb1b278/"
-    },
+
     {
         name: "Harshdeep Jakhar",
-        position: "CTO (AI Developer)",
+        position: "Team Member",
         imageUrl:"team/harshdeep.jpg",
         linkedIn: "https://www.linkedin.com/in/harshdeep-jakhar-b1736a286/"
     },
     {
-        name: "Maurya Kandhari",
-        position: "Head of Content, Publicity, and Outreach",
-        imageUrl:"team/maurya.jpg?updatedAt=1744288980776",
-        linkedIn: "https://www.linkedin.com/in/maurya-kandhari-a4bb16313/"
+        name: "Vayan",
+        position: "Team Member",
+        imageUrl:"team/vayan.jpg",
+        linkedIn: "https://www.linkedin.com/in/vayanmalik/"
     },
     {
         name: "Awanti Prakash",
-        position: "Head of 2D Animation & Creativity",
+        position: "Team Member",
         imageUrl:"team/awanti.jpg",
         linkedIn: "https://www.linkedin.com/in/awanti-prakash/"
     },
-    {
-        name: "Piyush Malik",
-        position: "Head of Video Editing and Post-Production",
-        imageUrl:"team/piyush2.jpg",
-        linkedIn: "https://www.linkedin.com/in/p1yushmalik/"
-    },
-    {
-        name: "Ashwin Garg",
-        position: "Head of 3D Animation and Modelling",
-        imageUrl:"team/ashwin.webp",
-        linkedIn: "https://www.linkedin.com/in/ashwin-garg-251781317/"
-    },
-    {
-        name: "Aryan Khurana",
-        position: "Head of Graphic Design",
-        imageUrl:"team/aryan.webp",
-        linkedIn: "https://www.linkedin.com/in/aryan-khurana-0-/"
-    },
+
+
 ]
 
 export default function Team() {
@@ -125,6 +96,7 @@ export default function Team() {
               className="text-4xl text-center z-20"
               animation="slideUp"
               by="word"
+              once={true}
             >
              Our Leadership
             </TextAnimate>
@@ -139,7 +111,7 @@ export default function Team() {
               animation="slideUp"
               by="word"
             >
-             Department Leads & Operations
+             Department Leads
             </TextAnimate>
            <div className="flex flex-wrap p-8 gap-2 justify-center gap-y-16 gap-x-20 items-center ">
                 {teamData.slice(2).map((member,idx)=>(

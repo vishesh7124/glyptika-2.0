@@ -18,6 +18,7 @@ import ThreeD from "./pages/3D"
 import Services from "./pages/Services"
 import Team from "./pages/Team"
 import Contact from "./pages/Contact"
+import Explor from "./pages/Explor"
 
 
 
@@ -46,6 +47,7 @@ function App() {
           <Route path="/services" element={<Services/>} />
           <Route path="/team" element={<Team/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/explor" element={<Explor/>} />
         </Routes>
         {scrollPosition >= 0.05 && scrollPosition <= 0.9 && (<AnimatePresence>
 
