@@ -47,7 +47,7 @@ function App() {
           <Route path="/services" element={<Services/>} />
           <Route path="/team" element={<Team/>} />
           <Route path="/contact" element={<Contact/>} />
-          <Route path="/explor" element={<Explor/>} />
+          <Route path="/xplor" element={<Explor/>} />
         </Routes>
         {scrollPosition >= 0.05 && scrollPosition <= 0.9 && (<AnimatePresence>
 
