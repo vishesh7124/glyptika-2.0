@@ -122,7 +122,7 @@ export default function VRScene() {
       <div
         className="fixed top-0 left-0 w-full h-screen bg-center bg-cover z-0 pointer-events-none transition-opacity duration-300"
         style={{
-          backgroundImage: XploreBG, // <-- Change image path here
+          backgroundImage: `url(${XploreBG})`, // <-- Change image path here
           opacity: bgOpacity,
         }}
       />
@@ -136,7 +136,7 @@ export default function VRScene() {
       <section
         className="relative min-h-screen px-6 md:px-12 lg:px-24 py-32 space-y-32 text-white bg-fixed bg-center bg-cover"
         style={{
-          backgroundImage: XploreBG , // <-- Same image for smooth transition
+          backgroundImage: `url(${XploreBG})` // <-- Same image for smooth transition
         }}
       >
         <div className="absolute inset-0 bg-black/50 z-0" />
