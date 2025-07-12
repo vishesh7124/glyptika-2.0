@@ -31,10 +31,11 @@ const Navbar = () => {
             <h1 className="font-text-primary text-2xl ">GLYPTIKA</h1>
             <div className="links flex justify-between max-sm:hidden font-text-secondary  gap-8">
                 <NavLink to="/" className="hover:text-[#5EC2B5]" >HOME</NavLink>
+                <NavLink to="/xplor" className="hover:text-[#5EC2B5]">XPLOR</NavLink>
                 <NavMenu/>
                 <NavLink to="/services" className="hover:text-[#5EC2B5]">SERVICES</NavLink>
                 <NavLink to="/team" className="hover:text-[#5EC2B5]">TEAM</NavLink>
-                <NavLink to="/xplor" className="hover:text-[#5EC2B5]">XPLOR</NavLink>
+                
             </div>
             <Button className="bg-[#5EC2B5] p-4 rounded-3xl max-sm:hidden " ><NavLink to="/contact">Contact Us</NavLink></Button>
             <div className="hamburger-menu sm:hidden" onClick={()=>setMenuOpen(!menuOpen)} >
@@ -55,10 +56,11 @@ const Navbar = () => {
             <div className="separator w-full h-[0.050rem] bg-white "></div>
             <div className="links flex flex-col justify-center items-center gap-3 font-text-secondary " >
                 <NavLink to="/" className="hover:text-[#5EC2B5]"  >HOME</NavLink>
+                <NavLink to="/xplor" className="hover:text-[#5EC2B5]">XPLOR</NavLink>
                 <NavMenu />
                 <NavLink to="/services" className="hover:text-[#5EC2B5]"  >SERVICES</NavLink>
                 <NavLink to="/team" className="hover:text-[#5EC2B5]">TEAM</NavLink>
-                <NavLink to="/xplor" className="hover:text-[#5EC2B5]">XPLOR</NavLink>
+                
 
             </div>
             <Button className="bg-[#5EC2B5] p-4 rounded-3xl  " ><NavLink to="/contact">Contact Us</NavLink></Button>

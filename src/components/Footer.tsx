@@ -34,10 +34,24 @@ const Footer = () => {
                 <IconCopyright className='h-4 w-4' />
                  <p className='text-sm max-sm:text-xs ' >ALL RIGHTS RESERVED BY GLYPTIKA STUDIOS LLP</p>
             </div>
-            <div className="social flex justify-center items-center">
-                <IconBrandLinkedin className='h-8 w-8 hover:cursor-pointer hover:text-[#5EC2B5]' />
-                <IconBrandInstagram className='h-8 w-8 hover:cursor-pointer hover:text-[#5EC2B5]' />
+            <div className="social flex justify-center items-center gap-4">
+                <a 
+                    href="https://www.linkedin.com/company/glyptika-studios-llp" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    <IconBrandLinkedin className='h-8 w-8 hover:cursor-pointer hover:text-[#5EC2B5]' />
+                </a>
+
+                <a 
+                    href="https://www.instagram.com/glyptika_studios/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    <IconBrandInstagram className='h-8 w-8 hover:cursor-pointer hover:text-[#5EC2B5]' />
+                </a>
             </div>
+
         </div>
     </div>
   )

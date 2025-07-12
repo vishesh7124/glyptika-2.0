@@ -22,7 +22,7 @@ export default function XplorIntroSection() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{}}
+          viewport={{once: true}}
           className="text-xs md:text-sm uppercase tracking-widest text-white font-semibold"
         >
           Design Smarter. Build Faster.
@@ -33,10 +33,10 @@ export default function XplorIntroSection() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{}}
+          viewport={{once: true}}
           className="text-4xl md:text-6xl font-extrabold text-gray-900 mt-4 leading-tight"
         >
-          <span className="text-white bg-clip-text text-transparent text-shadow-neutral-950">
+          <span className="text-white bg-clip-text  text-shadow-neutral-950">
             Visualize in VR Instantly
           </span>
         </motion.h1>
@@ -46,7 +46,7 @@ export default function XplorIntroSection() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{}}
+          viewport={{once: true}}
           className="mt-6 text-lg md:text-xl text-white max-w-3xl"
         >
           Xplor is an AI-powered, no-code platform that transforms your 2D floor plans into immersive,
@@ -58,7 +58,7 @@ export default function XplorIntroSection() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{}}
+          viewport={{once: true}}
           className="mt-4 text-base text-white max-w-2xl"
         >
           Built for interior designers, architects, and builders, Xplor replaces complex tools and
@@ -70,7 +70,7 @@ export default function XplorIntroSection() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{once: false}}
+          viewport={{once: true}}
           className="mt-10 flex flex-wrap justify-center gap-4 text-sm font-medium"
         >
           <span className="bg-[rgba(17,24,39,0.65)] text-white px-4 py-2 rounded-full border border-indigo-100">
@@ -91,7 +91,7 @@ export default function XplorIntroSection() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{}}
+          viewport={{once:true}}
           className="mt-10"
         >
           <button className="bg-indigo-600 hover:bg-indigo-700 transition-colors text-white px-8 py-3 rounded-full text-base md:text-lg font-semibold shadow-lg hover:shadow-xl">

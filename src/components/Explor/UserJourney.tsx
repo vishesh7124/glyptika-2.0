@@ -69,7 +69,7 @@ export default function UserJourney() {
             custom={index}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true }}
             variants={cardVariant}
             className={`flex flex-col items-center gap-10 lg:gap-16 ${
               index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
