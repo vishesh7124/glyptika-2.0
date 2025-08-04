@@ -9,7 +9,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-
 interface SelectionTile {
   id: string;
   title: string;
@@ -24,7 +23,7 @@ const selectionData: SelectionTile[] = [
     title: "MLSC × GLYPTIKA",
     description:
       "Access MLSC workshop resources, 3D modeling tutorials, and exclusive content for collaborative learning.",
-    imageUrl: "https://placehold.co/500x300/1e2340/4fd1c7?text=MLSC+×+GLYPTIKA",
+    imageUrl: "https://placehold.co/300x200/0f111a/3de0ce?text=MLSC+×+GLYPTIKA",
     targetRoute: "/landing",
   },
   {
@@ -32,8 +31,7 @@ const selectionData: SelectionTile[] = [
     title: "FROSH × GLYPTIKA",
     description:
       "Explore FROSH workshop materials, beginner-friendly 3D modeling guides, and orientation resources.",
-    imageUrl:
-      "https://placehold.co/500x300/1e2340/4fd1c7?text=FROSH+×+GLYPTIKA",
+    imageUrl: "https://placehold.co/300x200/0f111a/3de0ce?text=FROSH+×+GLYPTIKA",
     targetRoute: "/workshop",
   },
 ];
@@ -64,7 +62,6 @@ export function MainSelection() {
       setIsLoading(true);
       setError("");
 
-      // Simulate loading
       setTimeout(() => {
         setIsLoading(false);
         setIsModalOpen(false);
@@ -83,45 +80,42 @@ export function MainSelection() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-primary">
+    <div className="min-h-screen bg-gradient-to-br from-[#0a0e17] via-[#101624] to-[#0a0f1f] flex flex-col items-center px-4 md:px-6">
       {/* Header */}
-      <div className="relative text-center py-12">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-        <h1 className="text-5xl md:text-6xl font-bold text-primary mb-4 tracking-wider">
+      <div className="relative text-center py-12 md:py-16 w-full max-w-4xl mx-auto">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+        <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-600 mb-5 tracking-tight drop-shadow-md">
           GLYPTIKA
         </h1>
-        <p className="text-2xl text-muted-foreground font-light">
+        <p className="text-lg md:text-xl text-slate-400 font-light backdrop-blur-sm px-4 rounded-xl inline-block">
           Choose Your Workshop Experience
         </p>
       </div>
 
-      {/* Selection Grid */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
+      {/* Selection Tiles */}
+      <div className="w-full max-w-5xl pb-14 md:pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           {selectionData.map((tile) => (
             <div
               key={tile.id}
               onClick={() => handleTileClick(tile)}
-              className="group relative bg-card/80 backdrop-blur-glass rounded-3xl p-8 cursor-pointer transition-all duration-300 hover:-translate-y-3 hover:shadow-glow border border-border overflow-hidden"
+              className="group relative bg-[#121a2b]/70 border border-cyan-400/10 hover:border-cyan-300/30 rounded-2xl p-6 md:p-10 transition-all duration-300 hover:-translate-y-2 hover:shadow-cyan-400/20 hover:shadow-lg cursor-pointer overflow-hidden"
             >
-              {/* Shimmer effect */}
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
-
-              {/* Image */}
-              <div className="w-full h-64 bg-secondary rounded-2xl mb-8 overflow-hidden">
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-700 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent pointer-events-none" />
+              <div className="w-full h-48 md:h-64 overflow-hidden mb-6 border border-white/10 rounded-xl">
                 <img
                   src={tile.imageUrl}
                   alt={tile.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
                 />
+                
               </div>
-
-              {/* Content */}
               <div className="relative z-10 text-center">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <br />
+                <h3 className="text-2xl font-semibold text-white mb-2 drop-shadow">
                   {tile.title}
                 </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
+                <p className="text-slate-400 text-sm md:text-base">
                   {tile.description}
                 </p>
               </div>
@@ -130,44 +124,42 @@ export function MainSelection() {
         </div>
       </div>
 
-      {/* Password Modal */}
+      {/* Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="bg-gradient-card border-border max-w-md">
+        <DialogContent className="bg-gradient-to-br from-[#121a2b] via-[#101624] to-[#0a0f1f] border border-cyan-500/10 text-white rounded-xl max-w-md shadow-lg">
           <DialogHeader>
-            <DialogTitle className="text-foreground text-xl">
+            <DialogTitle className="text-xl md:text-2xl font-bold">
               Enter Access Code
             </DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
-            <p className="text-muted-foreground">
+          <div className="space-y-5 pt-2">
+            <p className="text-slate-400 text-sm md:text-base">
               Please enter the password to access workshop resources:
             </p>
+            <br />
             <Input
               type="password"
-              placeholder="Enter password"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
                 setError("");
               }}
               onKeyPress={handleKeyPress}
-              className="bg-secondary/50 border-input text-foreground placeholder:text-muted-foreground focus:ring-primary focus:border-primary"
+              className="bg-[#0f1624]/70 border border-cyan-400/20 text-white placeholder:text-slate-400 rounded-lg focus:ring-cyan-400 focus:border-cyan-400"
+              placeholder="Enter password"
               autoFocus
             />
-            {error && <p className="text-destructive text-sm">{error}</p>}
+            <br />
+            {error && (
+              <p className="text-red-500 text-sm font-medium">{error}</p>
+            )}
+            <br />
             <Button
               onClick={handlePasswordSubmit}
               disabled={isLoading}
-              className="w-full bg-gradient-accent hover:opacity-90 text-accent-foreground font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-glow"
+              className="w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 hover:brightness-110 text-white py-2 rounded-lg transition duration-300"
             >
-              {isLoading ? (
-                <>
-                  <span className="loading-spinner mr-2" />
-                  Accessing...
-                </>
-              ) : (
-                "Access Workshop"
-              )}
+              {isLoading ? "Accessing..." : "Access Workshop"}
             </Button>
           </div>
         </DialogContent>

@@ -1,36 +1,35 @@
-import { Routes, Route, useLocation } from "react-router-dom"
-import { Button } from "./components/ui/button"
-import { Link } from "react-router-dom"
-import { useState } from "react"
-import { useScroll, useMotionValueEvent } from "framer-motion"
-import { AnimatePresence, motion } from "framer-motion"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
-import { Toaster } from "./components/ui/sonner"
-import { AuroraBackground } from "./components/aurora-background"
+import { Routes, Route, useLocation } from "react-router-dom";
+import { Button } from "./components/ui/button";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useScroll, useMotionValueEvent } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { Toaster } from "./components/ui/sonner";
+import { AuroraBackground } from "./components/aurora-background";
 
-import Landings from "./pages/Landings"
-import Projects from "./pages/Projects"
-import ProjectDetails from "./pages/ProjectDetails"
-import ThreeD from "./pages/3D"
-import Services from "./pages/Services"
-import Team from "./pages/Team"
-import Contact from "./pages/Contact"
-import Explor from "./pages/Explor"
-import Index from "./components/workshop/Index"
-import Day1Resources from "./components/workshop/Day1Resources"
-import Day2Resources from "./components/workshop/Day2Resources"
-import Day3Resources from "./components/workshop/Day3Resources"
-import Day4Resources from "./components/workshop/Day4Resources"
-import Day5Resources from "./components/workshop/Day5Resources"
-import BonusResources from "./components/workshop/BonusResources"
-import NotFound from "./components/workshop/NotFound"
-import { MainSelection } from "./components/workshop/MainSelection"
+import Landings from "./pages/Landings";
+import Projects from "./pages/Projects";
+import ProjectDetails from "./pages/ProjectDetails";
+import ThreeD from "./pages/3D";
+import Services from "./pages/Services";
+import Team from "./pages/Team";
+import Contact from "./pages/Contact";
+import Explor from "./pages/Explor";
+import Index from "./components/workshop/Index";
+import Day1Resources from "./components/workshop/Day1Resources";
+import Day2Resources from "./components/workshop/Day2Resources";
+import Day3Resources from "./components/workshop/Day3Resources";
+
+import BonusResources from "./components/workshop/BonusResources";
+import NotFound from "./components/workshop/NotFound";
+import { MainSelection } from "./components/workshop/MainSelection";
 
 function App() {
-  const { scrollYProgress } = useScroll()
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const location = useLocation()
+  const { scrollYProgress } = useScroll();
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const location = useLocation();
 
   const excludedRoutes = [
     "/landing",
@@ -41,14 +40,14 @@ function App() {
     "/day4",
     "/day5",
     "/bonus",
-    "*"
-  ]
+    "*",
+  ];
 
-  const shouldHideLayout = excludedRoutes.includes(location.pathname)
+  const shouldHideLayout = excludedRoutes.includes(location.pathname);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    setScrollPosition(latest)
-  })
+    setScrollPosition(latest);
+  });
 
   const routes = (
     <Routes>
@@ -65,12 +64,11 @@ function App() {
       <Route path="/day1" element={<Day1Resources />} />
       <Route path="/day2" element={<Day2Resources />} />
       <Route path="/day3" element={<Day3Resources />} />
-      <Route path="/day4" element={<Day4Resources />} />
-      <Route path="/day5" element={<Day5Resources />} />
+
       <Route path="/bonus" element={<BonusResources />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-  )
+  );
 
   // 👇 Minimal layout for specific routes
   if (shouldHideLayout) {
@@ -79,7 +77,7 @@ function App() {
         {routes}
         <Toaster />
       </div>
-    )
+    );
   }
 
   // 👇 Full layout for normal pages
@@ -96,11 +94,11 @@ function App() {
               initial={{ x: 20 }}
               animate={{
                 x: 0,
-                transition: { type: "spring", duration: 1, bounce: 0.1 }
+                transition: { type: "spring", duration: 1, bounce: 0.1 },
               }}
               exit={{
                 x: 0,
-                transition: { type: "spring", duration: 0.5, bounce: 0.1 }
+                transition: { type: "spring", duration: 0.5, bounce: 0.1 },
               }}
               className="fixed bottom-10 right-7 z-20"
             >
@@ -120,7 +118,7 @@ function App() {
         <Toaster />
       </AuroraBackground>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
