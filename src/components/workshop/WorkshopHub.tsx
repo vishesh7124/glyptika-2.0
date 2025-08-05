@@ -28,7 +28,7 @@ const workshopData: WorkshopTile[] = [
       "Dive deeper into advanced modeling techniques, texturing workflows, and professional tips for creating stunning visuals.",
     imageUrl:
       "https://placehold.co/400x200/1e2340/4fd1c7?text=Advanced+Techniques",
-    resourceUrl: "/day2",
+    resourceUrl: "https://drive.google.com/drive/folders/10ziTQYszec7StWxT2k4hpwoEYirZf8N1",
   },
   {
     id: "day3",
@@ -38,7 +38,7 @@ const workshopData: WorkshopTile[] = [
       "Master animation principles and rendering techniques to bring your creations to life with professional quality output.",
     imageUrl:
       "https://placehold.co/400x200/1e2340/4fd1c7?text=Animation+%26+Rendering",
-    resourceUrl: "/day3",
+    resourceUrl: "https://drive.google.com/drive/folders/1OLkVWr1ZpgHKelHVQ9QIdZCRi93c7cCE",
   }
   // {
   //   id: "files",
@@ -136,13 +136,13 @@ export function WorkshopHub() {
 
               {/* Optional image or banner */}
               <div className="w-full h-48 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-xl mb-7 overflow-hidden border border-white/10 shadow-md">
-                {/* <img
-                  src="/images.jpeg"
+                <img
+                  src="https://placehold.co/400x200/1e2340/4fd1c7?text=DOWNLOAD+BLENDER"
                   alt="Featured"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl"
-                /> */}
+                />
               </div>
-
+              <br />
               {/* Content */}
               <div className="relative z-10 text-center flex flex-col justify-between h-full">
                 <h2 className="text-2xl font-bold text-white mb-2 drop-shadow">
