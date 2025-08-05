@@ -18,9 +18,7 @@ import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import Explor from "./pages/Explor";
 import Index from "./components/workshop/Index";
-import Day1Resources from "./components/workshop/Day1Resources";
-import Day2Resources from "./components/workshop/Day2Resources";
-import Day3Resources from "./components/workshop/Day3Resources";
+
 
 import BonusResources from "./components/workshop/BonusResources";
 import NotFound from "./components/workshop/NotFound";
