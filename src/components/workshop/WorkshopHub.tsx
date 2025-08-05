@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 interface WorkshopTile {
   id: string;
@@ -130,11 +129,11 @@ export function WorkshopHub() {
 
               {/* Optional image or banner */}
               <div className="w-full h-48 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-xl mb-7 overflow-hidden border border-white/10 shadow-md">
-                <img
+                {/* <img
                   src="/images.jpeg"
                   alt="Featured"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl"
-                />
+                /> */}
               </div>
 
               {/* Content */}
