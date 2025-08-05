@@ -31,8 +31,7 @@ function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const location = useLocation();
 
-  const excludedRoutes = [
-    "/landing",
+  const hideEverything = [
     "/workshop",
     "/day1",
     "/day2",
@@ -43,7 +42,10 @@ function App() {
     "*",
   ];
 
-  const shouldHideLayout = excludedRoutes.includes(location.pathname);
+  const onlyNavbarRoutes = ["/landing"];
+
+  const isHideEverything = hideEverything.includes(location.pathname);
+  const isOnlyNavbar = onlyNavbarRoutes.includes(location.pathname);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setScrollPosition(latest);
@@ -64,14 +66,12 @@ function App() {
       <Route path="/day1" element={<Day1Resources />} />
       <Route path="/day2" element={<Day2Resources />} />
       <Route path="/day3" element={<Day3Resources />} />
-
       <Route path="/bonus" element={<BonusResources />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
 
-  // 👇 Minimal layout for specific routes
-  if (shouldHideLayout) {
+  if (isHideEverything) {
     return (
       <div className="min-h-screen bg-background text-foreground">
         {routes}
@@ -80,7 +80,16 @@ function App() {
     );
   }
 
-  // 👇 Full layout for normal pages
+  if (isOnlyNavbar) {
+    return (
+      <div className="min-h-screen bg-background text-foreground">
+        <Navbar />
+        {routes}
+        <Toaster />
+      </div>
+    );
+  }
+
   return (
     <div className="h-full w-full">
       <AuroraBackground>
@@ -120,5 +129,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
