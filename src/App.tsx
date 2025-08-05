@@ -63,9 +63,9 @@ function App() {
       <Route path="/xplor" element={<Explor />} />
       <Route path="/landing" element={<MainSelection />} />
       <Route path="/workshop" element={<Index />} />
-      <Route path="/day1" element={<Day1Resources />} />
+      {/* <Route path="/day1" element={<Day1Resources />} />
       <Route path="/day2" element={<Day2Resources />} />
-      <Route path="/day3" element={<Day3Resources />} />
+      <Route path="/day3" element={<Day3Resources />} /> */}
       <Route path="/bonus" element={<BonusResources />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

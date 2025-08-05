@@ -44,7 +44,7 @@ export function MainSelection() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const correctPassword = "Gk-05/08/25";
+  const correctPassword = "Gk-wkshp";
 
   const handleTileClick = (tile: SelectionTile) => {
     if (tile.id === "frosh") {

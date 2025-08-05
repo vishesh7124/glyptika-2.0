@@ -1,4 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+
 
 interface WorkshopTile {
   id: string;
@@ -7,7 +12,10 @@ interface WorkshopTile {
   description: string;
   imageUrl: string;
   resourceUrl: string;
+  protected?: boolean;
+  password?: string;
 }
+
 
 const workshopData: WorkshopTile[] = [
   {
@@ -19,6 +27,8 @@ const workshopData: WorkshopTile[] = [
     imageUrl:
       "https://placehold.co/400x200/1e2340/4fd1c7?text=3D+Modeling+Basics",
     resourceUrl: "https://drive.google.com/drive/folders/13TjuBb4Os0-g-C56IaKNTONxAN5DGYi8",
+    protected: true,
+    password: "Gk-05/08/25"
   },
   {
     id: "day2",
@@ -29,6 +39,8 @@ const workshopData: WorkshopTile[] = [
     imageUrl:
       "https://placehold.co/400x200/1e2340/4fd1c7?text=Advanced+Techniques",
     resourceUrl: "https://drive.google.com/drive/folders/10ziTQYszec7StWxT2k4hpwoEYirZf8N1",
+    protected: true,
+    password: "GK-08/06/25"
   },
   {
     id: "day3",
@@ -38,32 +50,62 @@ const workshopData: WorkshopTile[] = [
       "Master animation principles and rendering techniques to bring your creations to life with professional quality output.",
     imageUrl:
       "https://placehold.co/400x200/1e2340/4fd1c7?text=Animation+%26+Rendering",
-    resourceUrl: "https://drive.google.com/drive/folders/1OLkVWr1ZpgHKelHVQ9QIdZCRi93c7cCE",
+    resourceUrl: "/workshop",
+    protected: true,
+    password: ""
+  },
+  {
+    id: "Media",
+    day: "Media",
+    title: "Access Media",
+    description: "Browse and download all captured moments, behind-the-scenes shots, and event highlights from the workshop.",
+    imageUrl: "https://placehold.co/50x50/1e2340/4fd1c7?text=Media+files",
+    resourceUrl: "/workshop",
   }
-  // {
-  //   id: "files",
-  //   day: "Files",
-  //   title: "Access all 3D files",
-  //   description:
-  //     "Download and access all workshop files, models, textures, and project resources in one convenient location.",
-  //   imageUrl: "https://placehold.co/400x200/1e2340/4fd1c7?text=3D+Files+Access",
-  //   resourceUrl: "/bonus",
-  // },
 ];
 
 export function WorkshopHub() {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [passwordInput, setPasswordInput] = useState("");
+  const [currentTile, setCurrentTile] = useState<WorkshopTile | null>(null);
+  const [error, setError] = useState("");
+
 
   const handleTileClick = (tile: WorkshopTile) => {
-  const isExternal = tile.resourceUrl.startsWith("http://") || tile.resourceUrl.startsWith("https://");
-
-  if (isExternal) {
-    window.open(tile.resourceUrl, "_blank");
+  if (tile.protected) {
+    setCurrentTile(tile);
+    setPasswordInput("");
+    setError("");
+    setIsModalOpen(true);
   } else {
-    navigate(tile.resourceUrl);
+    const isExternal = tile.resourceUrl.startsWith("http://") || tile.resourceUrl.startsWith("https://");
+    if (isExternal) {
+      window.open(tile.resourceUrl, "_blank");
+    } else {
+      navigate(tile.resourceUrl);
+    }
   }
 };
 
+  const handlePasswordSubmit = () => {
+  if (passwordInput === currentTile?.password) {
+    setIsModalOpen(false);
+    const isExternal = currentTile.resourceUrl.startsWith("http");
+    if (isExternal) {
+      window.open(currentTile.resourceUrl, "_blank");
+    } else {
+      navigate(currentTile.resourceUrl);
+    }
+  } else {
+    setError("Incorrect password. Please try again.");
+    setPasswordInput("");
+  }
+};
+
+const handleKeyPress = (e: React.KeyboardEvent) => {
+  if (e.key === "Enter") handlePasswordSubmit();
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#181c2b] via-[#232a3d] to-[#1e2340] flex flex-col items-center justify-center px-4">
@@ -80,7 +122,7 @@ export function WorkshopHub() {
 
       {/* Workshop Grid */}
       <div className="w-full max-w-6xl mx-auto pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-10 mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-10 mt-10">
           {/* Left: Workshop grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
   {workshopData.map((tile, index) => (
@@ -115,11 +157,11 @@ export function WorkshopHub() {
 
       {/* Content */}
       <div className="relative z-10 text-center">
-        <br /><br />
+        <br />
         <h3 className="text-2xl font-bold text-white mb-2 drop-shadow">
           {tile.title}
         </h3>
-        <br />
+        
         <p className="text-slate-300 text-base leading-relaxed">
           {tile.description}
         </p>
@@ -145,10 +187,10 @@ export function WorkshopHub() {
               <br />
               {/* Content */}
               <div className="relative z-10 text-center flex flex-col justify-between h-full">
-                <h2 className="text-2xl font-bold text-white mb-2 drop-shadow">
+                <h2 className="text-2xl font-bold text-white mb-1 drop-shadow">
                   Blender Compatibility
                 </h2>
-                <p className="text-slate-300 text-base mb-6">
+                <p className="text-slate-300 text-base mb-2">
                   Supported Blender versions by CPU/GPU configuration.
                 </p>
 
@@ -240,7 +282,42 @@ export function WorkshopHub() {
               </div>
             </div>
         </div>
+        
       </div>
-    </div>
-  );
+          {/* Password Modal */}
+    <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+      <DialogContent className="bg-gradient-to-br from-[#121a2b] via-[#101624] to-[#0a0f1f] border border-cyan-500/10 text-white rounded-xl max-w-md shadow-lg">
+        <DialogHeader>
+          <DialogTitle className="text-xl font-bold">
+            Enter Access Code for {currentTile?.title}
+          </DialogTitle>
+        </DialogHeader>
+        <div className="space-y-4 pt-2">
+          <Input
+            type="password"
+            value={passwordInput}
+            onChange={(e) => {
+              setPasswordInput(e.target.value);
+              setError("");
+            }}
+            onKeyPress={handleKeyPress}
+            className="bg-[#0f1624]/70 border border-cyan-400/20 text-white placeholder:text-slate-400 rounded-lg"
+            placeholder="Enter password"
+            autoFocus
+          />
+          <br />
+          {error && <p className="text-red-500 text-sm font-medium">{error}</p>}
+          <br />
+          <Button
+            onClick={handlePasswordSubmit}
+            className="w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 hover:brightness-110 text-white py-2 rounded-lg"
+          >
+            Access Resource
+          </Button>
+        </div>
+      </DialogContent>
+    </Dialog>
+
+  </div> // 👈 this closes the outermost container div
+);    
 }
