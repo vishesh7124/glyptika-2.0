@@ -18,7 +18,7 @@ const workshopData: WorkshopTile[] = [
       "Introduction to 3D modeling fundamentals, software setup, and basic navigation. Get started with your creative journey.",
     imageUrl:
       "https://placehold.co/400x200/1e2340/4fd1c7?text=3D+Modeling+Basics",
-    resourceUrl: "/day1",
+    resourceUrl: "https://drive.google.com/drive/folders/13TjuBb4Os0-g-C56IaKNTONxAN5DGYi8",
   },
   {
     id: "day2",
@@ -55,8 +55,15 @@ export function WorkshopHub() {
   const navigate = useNavigate();
 
   const handleTileClick = (tile: WorkshopTile) => {
+  const isExternal = tile.resourceUrl.startsWith("http://") || tile.resourceUrl.startsWith("https://");
+
+  if (isExternal) {
+    window.open(tile.resourceUrl, "_blank");
+  } else {
     navigate(tile.resourceUrl);
-  };
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#181c2b] via-[#232a3d] to-[#1e2340] flex flex-col items-center justify-center px-4">
