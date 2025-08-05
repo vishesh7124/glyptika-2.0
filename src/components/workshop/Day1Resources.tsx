@@ -174,10 +174,16 @@ export default function Day1Resources() {
           <br /><br />
         {/* Download All Button */}
         <div className="flex justify-center mt-10 md:mt-16">
-          <Button className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 hover:opacity-90 text-white font-bold px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl text-lg md:text-xl shadow-xl flex items-center justify-center gap-2 md:gap-3" disabled>
+          <a
+            href="https://drive.google.com/drive/folders/13TjuBb4Os0-g-C56IaKNTONxAN5DGYi8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          <Button className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 hover:opacity-90 text-white font-bold px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl text-lg md:text-xl shadow-xl flex items-center justify-center gap-2 md:gap-3">
             <Download className="w-6 md:w-7 h-6 md:h-7" />
             Download All Day 1 Resources
           </Button>
+          </a>
         </div>
       </div>
     </div>

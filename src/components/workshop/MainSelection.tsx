@@ -31,7 +31,7 @@ const selectionData: SelectionTile[] = [
     title: "FROSH × GLYPTIKA",
     description:
       "Explore FROSH workshop materials, beginner-friendly 3D modeling guides, and orientation resources.",
-    imageUrl: "https://placehold.co/300x200/0f111a/3de0ce?text=FROSH+×+GLYPTIKA",
+    imageUrl: "https://placehold.co/300x200/0f111a/3de0ce?text=FROSH+×+GLYPTIKA%0A%0ADate+-+5th+Aug+%0Atime+-+5:00+PM",
     targetRoute: "/workshop",
   },
 ];
@@ -44,7 +44,7 @@ export function MainSelection() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const correctPassword = "glyptika";
+  const correctPassword = "Gk-05/08/25";
 
   const handleTileClick = (tile: SelectionTile) => {
     if (tile.id === "frosh") {
