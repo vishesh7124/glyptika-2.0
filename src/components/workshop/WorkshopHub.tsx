@@ -50,9 +50,9 @@ const workshopData: WorkshopTile[] = [
       "Master animation principles and rendering techniques to bring your creations to life with professional quality output.",
     imageUrl:
       "https://placehold.co/400x200/1e2340/4fd1c7?text=Animation+%26+Rendering",
-    resourceUrl: "/workshop",
+    resourceUrl: "https://drive.google.com/drive/folders/1OLkVWr1ZpgHKelHVQ9QIdZCRi93c7cCE",
     protected: true,
-    password: ""
+    password: "Gk-07/08/25"
   },
   {
     id: "Media",
