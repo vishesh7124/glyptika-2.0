@@ -60,7 +60,7 @@ const workshopData: WorkshopTile[] = [
     title: "Access Media",
     description: "Browse and download all captured moments, behind-the-scenes shots, and event highlights from the workshop.",
     imageUrl: "https://placehold.co/50x50/1e2340/4fd1c7?text=Media+files",
-    resourceUrl: "/workshop",
+    resourceUrl: "https://drive.google.com/drive/folders/1aBDNewCer5jAIEPKMvFW8H8IAUuCEuKh",
   }
 ];
 
