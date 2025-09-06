@@ -1,76 +1,99 @@
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // Assuming you are using react-router-dom
+import { ArrowRight, CheckCircle, Building2, HardHat } from "lucide-react";
 
-const targets = [
+// Define the type for a single use case
+type UseCase = {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  features: string[];
+};
+
+// Create the data structure to populate the cards
+const useCases: UseCase[] = [
   {
-    emoji: "📐",
-    title: "Architects",
-    line1: "End-to-end 2D to VR in one platform",
-    line2: "Faster presentations, fewer delays",
+    title: "Architecture & Design",
+    description: "Streamline your design workflow from initial concept to final presentation. Instantly convert 2D plans into immersive VR environments to get client feedback faster than ever.",
+    icon: Building2,
+    features: [
+      "Instant 2D to 3D model conversion",
+      "Immersive VR walkthroughs for client presentations",
+      "Real-time material and lighting adjustments",
+    ],
   },
   {
-    emoji: "🎨",
-    title: "Interior Designers",
-    line1: "Instantly visualize and iterate in VR",
-    line2: "No technical tools or training needed",
-  },
-  {
-    emoji: "👷",
-    title: "Builders & Developers",
-    line1: "Pre-sell projects with immersive walkthroughs",
-    line2: "Cut cost and time from the design process",
+    title: "Construction & Development",
+    description: "Mitigate risks and improve project coordination by visualizing the entire construction process. Share interactive models with stakeholders to ensure everyone is on the same page.",
+    icon: HardHat,
+    features: [
+      "Visualize project phases before breaking ground",
+      "Enhance stakeholder communication and collaboration",
+      "Reduce costly on-site errors and rework",
+    ],
   },
 ];
 
-export default function XplorFor() {
+
+export default function UseCasesSection() {
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-24 bg-[rgba(17,24,39,0.55)]">
-      {/* Section Title */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: false }}
-        className="text-center mb-16"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Who Xplor Is For
-        </h2>
-        <p className="text-gray-400 text-sm md:text-base">
-          Tailored for every professional in the design-to-build journey
-        </p>
-      </motion.div>
-      <br /><br />
-      {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        {targets.map((item, index) => (
-          <motion.div
-            key={index}
-            className="m-4 border border-gray-700 rounded-2xl shadow-md p-8 text-center bg-[rgba(17,24,39,0.65)] hover:shadow-2xl hover:bg-[rgba(17,24,39,0.75)] transition-all duration-300"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: index * 0.2,
-              duration: 0.7,
-              ease: "easeOut",
-            }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }}
+    <section className="px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Perfect for Every Industry
+          </h2>
+          <br />
+          <h2 className="text-xl text-gray-300">
+            XPLOR empowers businesses across industries to create immersive experiences
+          </h2>
+          <br />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {useCases.map((useCase, index) => (
+            <div key={index} className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300 hover:border-teal-400/30 hover:shadow-xl hover:shadow-teal-500/10">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-green-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-green-400 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                  <useCase.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white"> {useCase.title}</h3>
+                <br />
+                <br />
+              </div>
+              
+              <p className="text-gray-300 text-base mb-6 leading-relaxed">
+                {useCase.description}
+                <br />
+                <br />
+              </p>
+              
+              <ul className="space-y-3">
+                {useCase.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
+                    <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
+                    {feature}
+                    <br />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <br />
+        <div className="text-center mt-12">
+          <p className="text-lg text-gray-400 mb-4">
+            Coming Soon: Real Estate, Interior Design, Education & More
+          </p>
+          <br />
+          <Link
+            to="/pricing"
+            className="group inline-flex items-center px-6 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-all duration-300 hover:shadow-lg"
           >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ delay: index * 0.2 + 0.2, duration: 0.5 }}
-              className="text-5xl mb-6"
-            >
-              {item.emoji}
-            </motion.div>
-            <h3 className="text-xl font-semibold text-white mb-3">
-              {item.title}
-            </h3>
-            <p className="text-sm text-gray-300 mb-2">{item.line1}</p>
-            <p className="text-sm text-gray-400">{item.line2}</p>
-          </motion.div>
-        ))}
+            Explore All Plans
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+          </Link>
+        </div>
       </div>
     </section>
   );

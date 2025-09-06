@@ -34,10 +34,11 @@ export default function XplorIntroSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{once: true}}
-          className="text-4xl md:text-6xl font-extrabold text-gray-900 mt-4 leading-tight"
+          className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
         >
-          <span className="text-white bg-clip-text  text-shadow-neutral-950">
-            Visualize in VR Instantly
+          <span className="inline-block">Transforming 2D Plans into</span>
+          <span className="block bg-gradient-to-r from-teal-400 to-green-400 bg-clip-text text-transparent">
+            <span className="inline-block">Immersive 3D & VR Experiences</span>
           </span>
         </motion.h1>
         <br />
@@ -47,23 +48,13 @@ export default function XplorIntroSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{once: true}}
-          className="mt-6 text-lg md:text-xl text-white max-w-3xl"
+          className="text-xl md:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed"
         >
-          Xplor is an AI-powered, no-code platform that transforms your 2D floor plans into immersive,
-          high-quality VR walkthroughs—within minutes.
+          XPLOR is an AI-assisted, no-code platform that converts 2D floor plans into immersive, 
+          interactive 3D and VR walkthroughs within minutes — making visualization effortless for 
+          businesses and individuals.
         </motion.p>
         <br />
-        <motion.p
-          custom={3}
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{once: true}}
-          className="mt-4 text-base text-white max-w-2xl"
-        >
-          Built for interior designers, architects, and builders, Xplor replaces complex tools and
-          multiple vendors with one seamless, user-controlled experience.
-        </motion.p>
         <br />
         <motion.div
           custom={4}
