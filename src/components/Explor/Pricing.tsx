@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Check, Star, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
@@ -340,12 +341,13 @@ const Pricing = () => {
           <br />
           <br />
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group px-8 py-4 bg-gradient-to-r from-teal-500 to-green-500 text-white font-semibold text-lg rounded-lg hover:from-teal-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden">
+          <Link
+              to="/contact" // <-- target page route
+              className="group px-8 py-4 bg-gradient-to-r from-teal-500 to-green-500 text-white font-semibold text-lg rounded-lg hover:from-teal-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden"
+            >
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-              <span className="relative">
-              Contact Sales Team
-              </span>
-            </button>
+              <span className="relative">Contact Sales Team</span>
+            </Link>
             <button className="group px-8 py-4 border-2 border-white/20 text-white font-semibold text-lg rounded-lg hover:bg-white/10 transition-all duration-300 hover:border-teal-400/50 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-teal-500/0 to-teal-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               <span className="relative">
