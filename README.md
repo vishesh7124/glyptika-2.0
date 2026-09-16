@@ -6,7 +6,7 @@ Welcome to the official repository for [Glyptika Studios](https://glyptika.com) 
 
 ## 🌐 Live Site
 
-👉 [https://glyptika.com](https://glyptika.com)
+👉 [https://glyptika.vishesh.site](https://glyptika.vishesh.site)
 
 ---
 
